@@ -1,0 +1,101 @@
+/* ===========================================
+   MD Design Tokens — Light Premium Theme
+   =========================================== */
+
+:root {
+  /* ── Primary Backgrounds (Light Theme) ── */
+  --md-bg-primary: #ffffff;          /* Pure white canvas */
+  --md-bg-secondary: #f8fafc;        /* Slate 50 subtle contrast */
+  --md-bg-tertiary: #f1f5f9;         /* Slate 100 section alternation */
+  --md-bg-elevated: #ffffff;         /* Cards & surfaces */
+  --md-bg-surface: rgba(255, 255, 255, 0.85); /* Glassmorphic headers */
+
+  /* ── Accent Colors ── */
+  --md-accent: #0d9488;              /* Primary teal (600) */
+  --md-accent-bright: #0f766e;       /* Deep teal (700) */
+  --md-accent-deep: #115e59;         /* Rich teal (800) */
+  --md-accent-muted: rgba(13, 148, 136, 0.08); /* Soft tint */
+  --md-accent-glow: rgba(13, 148, 136, 0.12);  /* Luminous accent glow */
+  --md-accent-subtle: rgba(13, 148, 136, 0.04);
+
+  /* ── Text Colors ── */
+  --md-text-primary: #0f172a;        /* Deep slate 900 for strong contrast */
+  --md-text-secondary: #334155;      /* Slate 700 for paragraphs */
+  --md-text-muted: #64748b;          /* Slate 500 for descriptions & metadata */
+  --md-text-accent: #0d9488;         /* Teal text highlight */
+  --md-text-inverse: #ffffff;
+
+  /* ── Borders ── */
+  --md-border-subtle: #e2e8f0;       /* Slate 200 */
+  --md-border-default: #cbd5e1;      /* Slate 300 */
+  --md-border-accent: rgba(13, 148, 136, 0.3);
+  --md-border-strong: #94a3b8;
+
+  /* ── Gradients ── */
+  --md-gradient-accent: linear-gradient(135deg, #0d9488, #0284c7);
+  --md-gradient-surface: linear-gradient(180deg, #ffffff, #f8fafc);
+  --md-gradient-glow: radial-gradient(ellipse at center, rgba(13, 148, 136, 0.08), transparent 70%);
+  --md-gradient-hero: radial-gradient(
+    ellipse 80% 50% at 50% 30%,
+    rgba(13, 148, 136, 0.07) 0%,
+    transparent 100%
+  );
+
+  /* ── Shadows ── */
+  --md-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --md-shadow-md: 0 4px 12px rgba(15, 23, 42, 0.06);
+  --md-shadow-lg: 0 10px 25px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.04);
+  --md-shadow-xl: 0 20px 40px -6px rgba(15, 23, 42, 0.1);
+  --md-shadow-glow: 0 0 35px rgba(13, 148, 136, 0.15);
+  --md-shadow-glow-sm: 0 0 16px rgba(13, 148, 136, 0.1);
+  --md-shadow-card: 0 2px 8px rgba(15, 23, 42, 0.04), 0 0 0 1px #e2e8f0;
+
+  /* ── Spacing Scale ── */
+  --md-section-y: clamp(4rem, 8vw, 8rem);
+  --md-section-y-sm: clamp(3rem, 6vw, 5rem);
+  --md-container-x: clamp(1rem, 5vw, 4rem);
+  --md-container-max: 80rem;
+
+  /* ── Border Radius ── */
+  --md-radius-sm: 0.375rem;
+  --md-radius-md: 0.5rem;
+  --md-radius-lg: 0.75rem;
+  --md-radius-xl: 1rem;
+  --md-radius-2xl: 1.5rem;
+  --md-radius-full: 9999px;
+
+  /* ── Typography ── */
+  --md-font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --md-font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+
+  /* ── Transitions ── */
+  --md-transition-fast: 150ms ease;
+  --md-transition-base: 250ms ease;
+  --md-transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  --md-transition-spring: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── Z-Index Scale ── */
+  --md-z-base: 0;
+  --md-z-dropdown: 40;
+  --md-z-nav: 50;
+  --md-z-overlay: 90;
+  --md-z-modal: 100;
+  --md-z-toast: 110;
+
+  /* ── Admin Theme (Clean Light SaaS) ── */
+  --md-admin-bg: #f8fafc;
+  --md-admin-bg-secondary: #f1f5f9;
+  --md-admin-sidebar: #0f172a;
+  --md-admin-sidebar-hover: #1e293b;
+  --md-admin-text: #0f172a;
+  --md-admin-text-muted: #64748b;
+  --md-admin-border: #e2e8f0;
+  --md-admin-accent: var(--md-accent);
+  --md-admin-card: #ffffff;
+
+  /* ── Status Colors ── */
+  --md-success: #16a34a;
+  --md-warning: #d97706;
+  --md-error: #dc2626;
+  --md-info: #2563eb;
+}

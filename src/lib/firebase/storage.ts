@@ -1,0 +1,10 @@
+import { getStorage, type FirebaseStorage } from 'firebase/storage';
+import { getFirebaseApp } from './app';
+
+let storage: FirebaseStorage | undefined;
+
+export function getFirebaseStorage(): FirebaseStorage {
+  if (storage) return storage;
+  storage = getStorage(getFirebaseApp());
+  return storage;
+}
