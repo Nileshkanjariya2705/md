@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, Suspense } from 'react';
+import Image from 'next/image';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -105,8 +106,15 @@ function AdminLoginForm() {
       <div className="relative z-10 w-full max-w-md">
         {/* Brand Header */}
         <div className="text-center mb-8">
-          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-teal-600 to-teal-800 text-white font-black text-2xl shadow-lg shadow-teal-600/20">
-            MD
+          <div className="mx-auto mb-5 flex justify-center">
+            <Image
+              src="/logo.png"
+              alt="Mogovaa Technology"
+              width={200}
+              height={60}
+              priority
+              className="h-11 w-auto object-contain"
+            />
           </div>
           {operatorName && (
             <div className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-teal-100/90 text-teal-800 border border-teal-300/80 px-3.5 py-1 text-xs font-bold shadow-xs">
@@ -118,7 +126,7 @@ function AdminLoginForm() {
             Administrator Gateway
           </h1>
           <p className="mt-2 text-sm text-slate-500">
-            Secure administrative control portal for MD Technologies
+            Secure administrative control portal for Mogovaa Technology
           </p>
         </div>
 

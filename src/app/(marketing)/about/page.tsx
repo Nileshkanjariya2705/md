@@ -10,7 +10,7 @@ import { Target, Compass, Zap, Shield, HeartHandshake, Lightbulb } from 'lucide-
 export const metadata: Metadata = {
   title: 'About Us',
   description:
-    'Learn about MD Technologies, our engineering principles, mission, leadership, and our dedication to digital excellence.',
+    'Learn about Mogovaa Technology, our engineering principles, mission, leadership, and our dedication to digital excellence.',
 };
 
 const VALUES = [
@@ -47,7 +47,7 @@ export default async function AboutPage() {
 
         <Container className="relative z-10 text-center max-w-4xl">
           <div className="inline-flex items-center gap-2 rounded-full border border-teal-200 bg-teal-50 px-4 py-1.5 text-xs font-semibold text-teal-800 mb-6 uppercase tracking-wider">
-            About MD Technologies
+            About Mogovaa Technology
           </div>
           <h1 className="text-4xl sm:text-6xl font-black text-slate-900 tracking-tight leading-[1.1]">
             Engineering What&apos;s Next with{' '}
@@ -56,7 +56,7 @@ export default async function AboutPage() {
             </span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-slate-600 leading-relaxed font-normal">
-            Founded by veteran software architects, MD was established to bridge the divide between corporate development agencies and high-velocity boutique product studios. We craft software that empowers visionary companies.
+            Founded by veteran software architects, Mogovaa Technology was established to bridge the divide between corporate development agencies and high-velocity boutique product studios. We craft software that empowers visionary companies.
           </p>
         </Container>
       </section>

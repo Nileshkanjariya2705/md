@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import {
   LayoutDashboard,
@@ -36,17 +37,13 @@ export function AdminSidebar() {
       <div>
         <div className="p-6 border-b border-slate-200 flex items-center justify-between">
           <Link href="/admin/dashboard" className="flex items-center gap-2.5">
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-teal-600 to-teal-800 text-white font-black text-base shadow-md">
-              MD
-            </div>
-            <div>
-              <div className="font-extrabold text-slate-900 text-base leading-none">
-                MD Admin
-              </div>
-              <div className="text-[10px] uppercase font-bold tracking-wider text-teal-600 mt-0.5">
-                Control Hub
-              </div>
-            </div>
+            <Image
+              src="/logo.png"
+              alt="Mogovaa Technology"
+              width={160}
+              height={45}
+              className="h-8 w-auto object-contain"
+            />
           </Link>
         </div>
 

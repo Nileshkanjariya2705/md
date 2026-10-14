@@ -21,7 +21,7 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Careers & Opportunities | MD Technologies',
+  title: 'Careers & Opportunities | Mogovaa Technology',
   description:
     'Join our elite team of engineers, architects, and product designers building high-concurrency systems, AI engines, and enterprise software.',
 };
@@ -143,7 +143,7 @@ export default function CareerPage() {
       <Container>
         {/* Page Hero */}
         <SectionHeading
-          badge="Careers at MD"
+          badge="Careers at Mogovaa Technology"
           title="Build the Future of High-Scale Systems"
           description="We are an elite, highly autonomous collective of technologists solving hard distributed systems, AI, and design challenges. We do not do mundane work."
         />
@@ -152,7 +152,7 @@ export default function CareerPage() {
         <div className="mb-24">
           <div className="text-center max-w-xl mx-auto mb-12">
             <span className="text-xs font-bold uppercase tracking-wider text-teal-600">
-              Why Engineers Choose MD
+              Why Engineers Choose Mogovaa
             </span>
             <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">
               Built for Builder Autonomy & Well-being

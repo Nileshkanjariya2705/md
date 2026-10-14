@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Project, PROJECT_CATEGORIES } from '@/features/projects/types';
 import { usePublishedProjectsQuery } from '@/features/projects/hooks/use-projects-query';
 import { ProjectCard } from './project-card';
+import { MobileCardScroll } from '@/components/ui/mobile-card-scroll';
 import { cn } from '@/lib/utils/cn';
 import { Layers } from 'lucide-react';
 
@@ -47,11 +48,11 @@ export function ProjectGrid({ initialProjects }: ProjectGridProps) {
 
       {/* Grid */}
       {filteredProjects.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <MobileCardScroll gridClassName="md:grid-cols-2 lg:grid-cols-3 md:gap-8">
           {filteredProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
-        </div>
+        </MobileCardScroll>
       ) : (
         <div className="rounded-3xl border border-slate-200 bg-white p-16 text-center max-w-md mx-auto shadow-sm">
           <Layers className="h-12 w-12 text-slate-400 mx-auto mb-4" />

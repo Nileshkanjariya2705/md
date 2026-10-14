@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { NAV_LINKS, SITE_CONFIG } from '@/lib/constants/navigation';
@@ -42,20 +43,17 @@ export function Navbar() {
         {/* Brand Logo */}
         <Link
           href="/"
-          className="flex items-center gap-2.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600 rounded-lg p-1"
+          className="flex items-center gap-2.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600 rounded-lg py-1 px-0.5"
+          aria-label="Mogovaa Technology Home"
         >
-          <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-teal-600 to-teal-800 text-white font-black text-lg tracking-wider shadow-md shadow-teal-600/20 group-hover:scale-105 transition-transform">
-            MD
-            <span className="absolute -bottom-1 -right-1 h-3 w-3 rounded-full bg-teal-400 ring-2 ring-white" />
-          </div>
-          <div className="flex flex-col">
-            <span className="font-extrabold text-lg tracking-tight text-slate-900 group-hover:text-teal-600 transition-colors">
-              {SITE_CONFIG.name}
-            </span>
-            <span className="text-[10px] uppercase font-bold tracking-widest text-teal-600 -mt-1">
-              Technologies
-            </span>
-          </div>
+          <Image
+            src="/logo.png"
+            alt="Mogovaa Technology Logo"
+            width={180}
+            height={55}
+            priority
+            className="h-8 sm:h-9 md:h-10 w-auto object-contain transition-transform group-hover:scale-105"
+          />
         </Link>
 
         {/* Desktop Navigation Links */}
@@ -98,11 +96,6 @@ export function Navbar() {
 
         {/* Mobile Actions & Menu Trigger */}
         <div className="flex items-center gap-2 lg:hidden">
-          <Button asChild size="sm" className="rounded-full shadow-xs text-xs px-3.5 py-1 h-8">
-            <Link href="/contact">
-              Contact Us
-            </Link>
-          </Button>
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

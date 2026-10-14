@@ -31,7 +31,7 @@ export async function generateMetadata({
     title: project.title,
     description: project.shortDescription,
     openGraph: {
-      title: `${project.title} | MD Technologies Case Study`,
+      title: `${project.title} | Mogovaa Technology Case Study`,
       description: project.shortDescription,
       images: [{ url: project.coverImage }],
     },

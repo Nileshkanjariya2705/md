@@ -4,6 +4,7 @@ import React, { useState, useMemo } from 'react';
 import { TeamMember } from '@/features/team/types';
 import { useActiveTeamQuery } from '@/features/team/hooks/use-team-query';
 import { TeamCard } from './team-card';
+import { MobileCardScroll } from '@/components/ui/mobile-card-scroll';
 import { cn } from '@/lib/utils/cn';
 import { Users, Search, Sparkles } from 'lucide-react';
 
@@ -95,11 +96,14 @@ export function TeamGrid({ initialTeam }: TeamGridProps) {
 
       {/* Grid */}
       {filteredTeam.length > 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        <MobileCardScroll
+          gridClassName="sm:grid-cols-2 lg:grid-cols-4 sm:gap-8"
+          cardWidthClass="w-[78vw] max-w-[300px] sm:w-auto"
+        >
           {filteredTeam.map((member) => (
             <TeamCard key={member.id} member={member} />
           ))}
-        </div>
+        </MobileCardScroll>
       ) : (
         <div className="rounded-3xl border border-slate-200 bg-white p-16 text-center max-w-md mx-auto shadow-sm">
           <Users className="h-12 w-12 text-slate-400 mx-auto mb-4" />

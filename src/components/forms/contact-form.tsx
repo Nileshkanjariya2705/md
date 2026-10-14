@@ -64,7 +64,7 @@ export function ContactForm() {
         </div>
         <h3 className="text-2xl font-bold text-slate-900 mb-2">Message Received</h3>
         <p className="text-slate-600 text-sm max-w-md mx-auto mb-6">
-          Thank you for reaching out to MD Technologies. A senior solutions architect will review your inquiry and respond within 24 hours.
+          Thank you for reaching out to Mogovaa Technology. A senior solutions architect will review your inquiry and respond within 24 hours.
         </p>
         <Button
           variant="outline"

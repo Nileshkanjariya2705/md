@@ -8,7 +8,7 @@ import { Mail, MapPin, Phone, Clock, ShieldCheck, Sparkles } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'Contact Us & Technical Scoping',
   description:
-    'Initiate a conversation with MD Technologies principal architects regarding new product builds, cloud migrations, or dedicated engineering squads.',
+    'Initiate a conversation with Mogovaa Technology principal architects regarding new product builds, cloud migrations, or dedicated engineering squads.',
 };
 
 export default function ContactPage() {

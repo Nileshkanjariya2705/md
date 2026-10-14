@@ -8,7 +8,7 @@ import { getPublishedProjects } from '@/features/projects/services/project.servi
 export const metadata: Metadata = {
   title: 'Projects & Portfolio',
   description:
-    'Explore MD Technologies case studies, enterprise software implementations, and cutting-edge digital products.',
+    'Explore Mogovaa Technology case studies, enterprise software implementations, and cutting-edge digital products.',
 };
 
 export default async function ProjectsPage() {

@@ -4,6 +4,7 @@ import { Container } from '@/components/layout/container';
 import { SectionHeading } from '@/components/layout/section-heading';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { MobileCardScroll } from '@/components/ui/mobile-card-scroll';
 import { CTASection } from '@/components/sections/cta-section';
 import {
   Code2,
@@ -24,7 +25,7 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Engineering & Technology Services | MD Technologies',
+  title: 'Engineering & Technology Services | Mogovaa Technology',
   description:
     'Full-cycle software engineering across Node.js/React, Python & AI/ML, React Native, .NET, Java, WordPress, Laravel, DevOps, and UI/UX design.',
 };
@@ -229,23 +230,28 @@ export default function ServicesPage() {
         </div>
 
         {/* Architectural Principles Bar */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
+        <MobileCardScroll
+          gridClassName="sm:grid-cols-2 lg:grid-cols-4 sm:gap-6 mb-24"
+          cardWidthClass="w-[75vw] max-w-[280px] sm:w-auto"
+        >
           {ARCHITECTURAL_PILLARS.map((pillar, idx) => {
             const Icon = pillar.icon;
             return (
               <div
                 key={idx}
-                className="p-6 rounded-2xl border border-slate-200 bg-slate-50/70 hover:bg-white hover:border-teal-500/30 hover:shadow-md transition-all duration-300"
+                className="p-6 rounded-2xl border border-slate-200 bg-slate-50/70 hover:bg-white hover:border-teal-500/30 hover:shadow-md transition-all duration-300 h-full flex flex-col justify-between"
               >
-                <div className="h-10 w-10 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center mb-4">
-                  <Icon className="h-5 w-5" />
+                <div>
+                  <div className="h-10 w-10 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center mb-4">
+                    <Icon className="h-5 w-5" />
+                  </div>
+                  <h4 className="text-base font-bold text-slate-900 mb-2">{pillar.title}</h4>
+                  <p className="text-xs text-slate-600 leading-relaxed">{pillar.desc}</p>
                 </div>
-                <h4 className="text-base font-bold text-slate-900 mb-2">{pillar.title}</h4>
-                <p className="text-xs text-slate-600 leading-relaxed">{pillar.desc}</p>
               </div>
             );
           })}
-        </div>
+        </MobileCardScroll>
 
         {/* Detailed Services Grid (All 9 Services in Sequence) */}
         <div className="space-y-12">
@@ -258,7 +264,10 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <MobileCardScroll
+            gridClassName="lg:grid-cols-2 md:gap-8"
+            cardWidthClass="w-[86vw] max-w-[370px] sm:w-[400px]"
+          >
             {SERVICES_DETAILED.map((service) => {
               const Icon = service.icon;
               return (
@@ -324,7 +333,7 @@ export default function ServicesPage() {
                 </Card>
               );
             })}
-          </div>
+          </MobileCardScroll>
         </div>
       </Container>
 

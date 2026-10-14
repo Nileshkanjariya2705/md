@@ -3,15 +3,16 @@ import { Container } from '@/components/layout/container';
 import { SectionHeading } from '@/components/layout/section-heading';
 import { Card } from '@/components/ui/card';
 import { AnimatedCounter } from '@/components/ui/animated-counter';
+import { MobileCardScroll } from '@/components/ui/mobile-card-scroll';
 import { ReviewsGrid } from '@/components/reviews/reviews-grid';
 import { CTASection } from '@/components/sections/cta-section';
 import { getPublishedReviews } from '@/features/reviews/services/review.service';
 import { Star, ShieldCheck, Award, ThumbsUp, Sparkles, Building2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Client Reviews & Endorsements | MD Technologies',
+  title: 'Client Reviews & Endorsements | Mogovaa Technology',
   description:
-    'Read authentic verified reviews and endorsements from founders, CTOs, and product executives who trust MD Technologies for digital engineering.',
+    'Read authentic verified reviews and endorsements from founders, CTOs, and product executives who trust Mogovaa Technology for digital engineering.',
 };
 
 const STATS = [
@@ -51,32 +52,37 @@ export default async function ReviewsPage() {
         <SectionHeading
           badge="Client Endorsements"
           title="Proven Execution. Endorsed by Technology Leaders."
-          description="Read authentic experiences from technology founders, CTOs, and digital leaders who trust MD Technologies to build, modernize, and scale their core platforms."
+          description="Read authentic experiences from technology founders, CTOs, and digital leaders who trust Mogovaa Technology to build, modernize, and scale their core platforms."
         />
 
         {/* Stats Showcase */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+        <MobileCardScroll
+          gridClassName="sm:grid-cols-2 lg:grid-cols-4 sm:gap-6 mb-20"
+          cardWidthClass="w-[72vw] max-w-[280px] sm:w-auto"
+        >
           {STATS.map((stat, idx) => {
             const Icon = stat.icon;
             return (
               <Card
                 key={idx}
-                className="p-6 bg-white border-slate-200 shadow-sm hover:border-teal-500/40 hover:shadow-lg transition-all duration-300"
+                className="p-6 bg-white border-slate-200 shadow-sm hover:border-teal-500/40 hover:shadow-lg transition-all duration-300 h-full flex flex-col justify-between"
               >
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="h-10 w-10 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center shrink-0">
-                    <Icon className="h-5 w-5" />
+                <div>
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="h-10 w-10 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center shrink-0">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <span className="text-2xl font-extrabold text-slate-900 tracking-tight">
+                      <AnimatedCounter value={stat.value} duration={1800} />
+                    </span>
                   </div>
-                  <span className="text-2xl font-extrabold text-slate-900 tracking-tight">
-                    <AnimatedCounter value={stat.value} duration={1800} />
-                  </span>
+                  <h4 className="text-sm font-bold text-slate-800 mb-1">{stat.label}</h4>
+                  <p className="text-xs text-slate-500">{stat.sub}</p>
                 </div>
-                <h4 className="text-sm font-bold text-slate-800 mb-1">{stat.label}</h4>
-                <p className="text-xs text-slate-500">{stat.sub}</p>
               </Card>
             );
           })}
-        </div>
+        </MobileCardScroll>
 
         {/* Interactive Filterable Reviews Grid */}
         <ReviewsGrid initialReviews={reviews} />
@@ -92,7 +98,7 @@ export default async function ReviewsPage() {
               Direct Senior Ownership. Never Subcontracted.
             </h3>
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-6">
-              When you engage MD Technologies, your product is personally architected and implemented by principal engineers. We maintain transparent sprint burndowns, shared Slack channels, and automated code review pipelines.
+              When you engage Mogovaa Technology, your product is personally architected and implemented by principal engineers. We maintain transparent sprint burndowns, shared Slack channels, and automated code review pipelines.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-teal-200/60 text-xs font-bold text-slate-700">
               <div className="flex items-center gap-2">

@@ -4,6 +4,7 @@ import React, { useState, useMemo } from 'react';
 import { ClientReview } from '@/features/reviews/types';
 import { usePublishedReviewsQuery } from '@/features/reviews/hooks/use-reviews-query';
 import { ReviewCard } from './review-card';
+import { MobileCardScroll } from '@/components/ui/mobile-card-scroll';
 import { cn } from '@/lib/utils/cn';
 import { Star, Search, MessageSquareQuote } from 'lucide-react';
 
@@ -97,11 +98,11 @@ export function ReviewsGrid({ initialReviews }: ReviewsGridProps) {
 
       {/* Grid */}
       {filteredReviews.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <MobileCardScroll gridClassName="md:grid-cols-2 lg:grid-cols-3 md:gap-8">
           {filteredReviews.map((review) => (
             <ReviewCard key={review.id} review={review} />
           ))}
-        </div>
+        </MobileCardScroll>
       ) : (
         <div className="rounded-3xl border border-slate-200 bg-white p-16 text-center max-w-md mx-auto shadow-sm">
           <MessageSquareQuote className="h-12 w-12 text-slate-400 mx-auto mb-4" />

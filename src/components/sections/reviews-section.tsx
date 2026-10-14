@@ -4,6 +4,7 @@ import { Container } from '@/components/layout/container';
 import { SectionHeading } from '@/components/layout/section-heading';
 import { ReviewCard } from '@/components/reviews/review-card';
 import { Button } from '@/components/ui/button';
+import { MobileCardScroll } from '@/components/ui/mobile-card-scroll';
 import { ArrowRight } from 'lucide-react';
 import { ClientReview } from '@/features/reviews/types';
 
@@ -21,14 +22,14 @@ export function ReviewsSection({ reviews }: ReviewsSectionProps) {
         <SectionHeading
           badge="Endorsements"
           title="Trusted by Visionary Founders & Engineering Leaders"
-          description="Read authentic feedback from the technology executives and product directors who build their businesses with MD."
+          description="Read authentic feedback from the technology executives and product directors who build their businesses with Mogovaa."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <MobileCardScroll gridClassName="md:grid-cols-2 lg:grid-cols-3 md:gap-8">
           {reviews.slice(0, 3).map((review) => (
             <ReviewCard key={review.id} review={review} />
           ))}
-        </div>
+        </MobileCardScroll>
 
         {/* Explore More Reviews Button */}
         <div className="mt-12 text-center">

@@ -2,6 +2,7 @@ import React from 'react';
 import { Container } from '@/components/layout/container';
 import { Card } from '@/components/ui/card';
 import { AnimatedCounter } from '@/components/ui/animated-counter';
+import { MobileCardScroll } from '@/components/ui/mobile-card-scroll';
 import { FolderCheck, Smile, Award, ShieldCheck } from 'lucide-react';
 
 const METRICS = [
@@ -38,13 +39,16 @@ export function MetricsSection() {
       <div className="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 w-[720px] h-[300px] bg-teal-500/5 blur-[120px] rounded-full" />
 
       <Container>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <MobileCardScroll
+          gridClassName="sm:grid-cols-2 lg:grid-cols-4 sm:gap-6"
+          cardWidthClass="w-[72vw] max-w-[280px] sm:w-auto"
+        >
           {METRICS.map((metric, idx) => {
             const Icon = metric.icon;
             return (
               <Card
                 key={idx}
-                className="relative p-7 bg-white/95 backdrop-blur-sm border-slate-200/90 rounded-3xl hover:border-teal-500/40 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center group overflow-hidden"
+                className="relative p-7 bg-white/95 backdrop-blur-sm border-slate-200/90 rounded-3xl hover:border-teal-500/40 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center group overflow-hidden h-full"
               >
                 {/* Subtle top indicator bar */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-teal-500 via-cyan-500 to-teal-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -67,7 +71,7 @@ export function MetricsSection() {
               </Card>
             );
           })}
-        </div>
+        </MobileCardScroll>
       </Container>
     </section>
   );

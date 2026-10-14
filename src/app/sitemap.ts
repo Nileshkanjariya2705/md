@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { getPublishedProjects } from '@/features/projects/services/project.service';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://md.dev';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://mogovaa.com';
 
   const staticRoutes = [
     '',

@@ -4,6 +4,7 @@ import { Container } from '@/components/layout/container';
 import { SectionHeading } from '@/components/layout/section-heading';
 import { TeamCard } from '@/components/team/team-card';
 import { Button } from '@/components/ui/button';
+import { MobileCardScroll } from '@/components/ui/mobile-card-scroll';
 import { ArrowRight } from 'lucide-react';
 import { TeamMember } from '@/features/team/types';
 
@@ -18,7 +19,7 @@ export function TeamPreview({ team }: TeamPreviewProps) {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <SectionHeading
             badge="Leadership"
-            title="The Minds Behind MD"
+            title="The Minds Behind Mogovaa"
             description="Our leadership team combines deep technical expertise from premier engineering organizations with a relentless passion for perfection."
             align="left"
             className="mb-0 max-w-2xl"
@@ -32,11 +33,11 @@ export function TeamPreview({ team }: TeamPreviewProps) {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <MobileCardScroll gridClassName="md:grid-cols-3 md:gap-8">
           {team.slice(0, 3).map((member) => (
             <TeamCard key={member.id} member={member} />
           ))}
-        </div>
+        </MobileCardScroll>
 
         {/* Explore More Team Button */}
         <div className="mt-12 text-center">

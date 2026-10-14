@@ -4,6 +4,7 @@ import { Container } from '@/components/layout/container';
 import { SectionHeading } from '@/components/layout/section-heading';
 import { ProjectCard } from '@/components/projects/project-card';
 import { Button } from '@/components/ui/button';
+import { MobileCardScroll } from '@/components/ui/mobile-card-scroll';
 import { ArrowRight } from 'lucide-react';
 import { Project } from '@/features/projects/types';
 
@@ -32,11 +33,11 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <MobileCardScroll gridClassName="md:grid-cols-2 lg:grid-cols-3 md:gap-8">
           {projects.slice(0, 3).map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
-        </div>
+        </MobileCardScroll>
 
         {/* Explore More Projects Button */}
         <div className="mt-12 text-center">

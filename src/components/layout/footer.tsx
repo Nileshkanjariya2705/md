@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Container } from './container';
 import { NAV_LINKS, SITE_CONFIG } from '@/lib/constants/navigation';
 import { ArrowUp, Mail, MapPin } from 'lucide-react';
@@ -29,18 +30,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 pb-16 border-b border-slate-200">
           {/* Brand Info */}
           <div className="md:col-span-1 lg:col-span-4 space-y-5">
-            <Link href="/" className="inline-flex items-center gap-2.5 group">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-teal-600 to-teal-800 text-white font-black text-lg tracking-wider shadow-md shadow-teal-600/20">
-                MD
-              </div>
-              <div className="flex flex-col">
-                <span className="font-extrabold text-xl tracking-tight text-slate-900 group-hover:text-teal-600 transition-colors">
-                  {SITE_CONFIG.name}
-                </span>
-                <span className="text-[10px] uppercase font-bold tracking-widest text-teal-600 -mt-1">
-                  Technologies
-                </span>
-              </div>
+            <Link href="/" className="inline-flex items-center gap-2.5 group" aria-label="Mogovaa Technology Home">
+              <Image
+                src="/logo.png"
+                alt="Mogovaa Technology Logo"
+                width={190}
+                height={60}
+                className="h-10 w-auto object-contain transition-transform group-hover:scale-105"
+              />
             </Link>
             <p className="text-sm text-slate-600 max-w-sm leading-relaxed">
               Engineering high-concurrency systems, AI-powered digital products, and enterprise cloud software for market-defining organizations.
@@ -147,7 +144,7 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <p>© {new Date().getFullYear()} {SITE_CONFIG.name} Technologies. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Mogovaa Technology. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <span className="hover:text-slate-700 cursor-pointer">Privacy Policy</span>
             <span className="hover:text-slate-700 cursor-pointer">Terms of Service</span>

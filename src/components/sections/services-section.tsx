@@ -6,6 +6,7 @@ import { Container } from '@/components/layout/container';
 import { SectionHeading } from '@/components/layout/section-heading';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { MobileCardScroll } from '@/components/ui/mobile-card-scroll';
 import {
   Code2,
   BrainCircuit,
@@ -185,13 +186,13 @@ export function ServicesSection() {
         />
 
         {/* Top 3 Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <MobileCardScroll gridClassName="md:grid-cols-2 lg:grid-cols-3 md:gap-8">
           {SERVICES.slice(0, 3).map((service) => {
             const Icon = service.icon;
             return (
               <Card
                 key={service.id}
-                className="group p-7 sm:p-8 border-slate-200/90 bg-white hover:border-teal-500/50 hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden rounded-3xl"
+                className="group p-7 sm:p-8 border-slate-200/90 bg-white hover:border-teal-500/50 hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden rounded-3xl h-full"
               >
                 <div>
                   {/* Top Bar with Icon and Badge */}
@@ -257,7 +258,7 @@ export function ServicesSection() {
               </Card>
             );
           })}
-        </div>
+        </MobileCardScroll>
 
         {/* Explore More Services Button */}
         <div className="mt-12 text-center">

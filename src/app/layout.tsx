@@ -13,35 +13,94 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | MD Technologies',
-    default: 'MD Technologies | AI-Powered Enterprise Software & Digital Solutions',
+    template: '%s | Mogovaa Technology',
+    default: 'Mogovaa Technology | AI-Powered Enterprise Software & Digital Solutions',
   },
   description:
-    'MD Technologies engineers high-concurrency systems, generative AI platforms, and bespoke enterprise software for industry-leading organizations worldwide.',
+    'Mogovaa Technology engineers high-concurrency systems, generative AI platforms, cloud architectures, and bespoke software solutions worldwide.',
   keywords: [
     'software engineering',
     'cloud architecture',
     'enterprise web apps',
     'AI solutions',
     'digital transformation',
-    'MD Technologies',
+    'Mogovaa Technology',
+    'Mogovaa',
+    'Magnovaa',
+    'Full Stack Development',
+    'Next.js',
+    'React',
+    'Python AI',
   ],
-  authors: [{ name: 'MD Technologies' }],
-  metadataBase: new URL('https://md.dev'),
+  authors: [{ name: 'Mogovaa Technology', url: 'https://mogovaa.com' }],
+  creator: 'Mogovaa Technology',
+  publisher: 'Mogovaa Technology',
+  metadataBase: new URL('https://mogovaa.com'),
+  alternates: {
+    canonical: 'https://mogovaa.com',
+  },
+  icons: {
+    icon: '/icon.png',
+    apple: '/icon.png',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://md.dev',
-    siteName: 'MD Technologies',
-    title: 'MD Technologies | AI-Powered Enterprise Software & Digital Solutions',
+    url: 'https://mogovaa.com',
+    siteName: 'Mogovaa Technology',
+    title: 'Mogovaa Technology | AI-Powered Enterprise Software & Digital Solutions',
     description:
       'We craft exceptional digital experiences that elevate brands and drive business growth through innovative technology solutions.',
+    images: [
+      {
+        url: '/logo.png',
+        width: 1024,
+        height: 362,
+        alt: 'Mogovaa Technology Logo',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'MD Technologies | AI-Powered Enterprise Software & Digital Solutions',
+    title: 'Mogovaa Technology | AI-Powered Enterprise Software & Digital Solutions',
     description:
       'We craft exceptional digital experiences that elevate brands and drive business growth through innovative technology solutions.',
+    images: ['/logo.png'],
+    site: '@mogovaa',
+    creator: '@mogovaa',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Mogovaa Technology',
+  alternateName: ['Mogovaa', 'Magnovaa Technology'],
+  url: 'https://mogovaa.com',
+  logo: 'https://mogovaa.com/logo.png',
+  description:
+    'Mogovaa Technology engineers high-concurrency systems, generative AI platforms, and bespoke enterprise software for industry-leading organizations worldwide.',
+  email: 'hello@mogovaa.com',
+  sameAs: [
+    'https://linkedin.com/company/mogovaa',
+    'https://twitter.com/mogovaa',
+    'https://github.com/mogovaa',
+  ],
+  contactPoint: {
+    '@type': 'ContactPoint',
+    email: 'hello@mogovaa.com',
+    contactType: 'customer support',
   },
 };
 
@@ -52,6 +111,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} light`} suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-screen bg-[var(--md-bg-primary)] text-[var(--md-text-primary)] antialiased selection:bg-teal-500/20 selection:text-teal-900">
         <QueryProvider>
           <AuthProvider>

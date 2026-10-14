@@ -6,6 +6,7 @@ import { Container } from '@/components/layout/container';
 import { SectionHeading } from '@/components/layout/section-heading';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { MobileCardScroll } from '@/components/ui/mobile-card-scroll';
 import { 
   Check, 
   Sparkles, 
@@ -84,7 +85,10 @@ export function PricingSection({ initialPlans }: PricingSectionProps) {
         </div>
 
         {/* 3 Pricing Cards Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch max-w-7xl mx-auto">
+        <MobileCardScroll
+          gridClassName="lg:grid-cols-3 md:gap-8 items-stretch max-w-7xl mx-auto"
+          cardWidthClass="w-[86vw] max-w-[360px] sm:w-[380px]"
+        >
           {plans.map((plan) => {
             const isCustom = typeof plan.monthlyPrice === 'string';
             const price = isCustom
@@ -228,7 +232,7 @@ export function PricingSection({ initialPlans }: PricingSectionProps) {
               </Card>
             );
           })}
-        </div>
+        </MobileCardScroll>
 
         {/* Trust Badges & Guarantees */}
         <div className="mt-16 max-w-5xl mx-auto rounded-3xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm">

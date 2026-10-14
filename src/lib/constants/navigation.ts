@@ -19,12 +19,13 @@ export const ADMIN_NAV_LINKS = [
 ] as const;
 
 export const SITE_CONFIG = {
-  name: 'MD',
-  tagline: 'Premium Digital Solutions',
+  name: 'Mogovaa',
+  fullName: 'Mogovaa Technology',
+  tagline: 'AI-Powered Enterprise Software & Digital Solutions',
   description:
-    'We craft exceptional digital experiences that elevate brands and drive business growth through innovative technology solutions.',
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://md.dev',
-  email: 'hello@md.dev',
+    'Mogovaa Technology engineers high-concurrency systems, generative AI platforms, cloud architectures, and bespoke software solutions worldwide.',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://mogovaa.com',
+  email: 'hello@mogovaa.com',
   phone: '+1 (555) 000-0000',
   address: {
     street: '123 Innovation Drive',
@@ -34,8 +35,8 @@ export const SITE_CONFIG = {
     country: 'US',
   },
   social: {
-    linkedin: 'https://linkedin.com/company/md',
-    github: 'https://github.com/md',
-    twitter: 'https://twitter.com/md',
+    linkedin: 'https://linkedin.com/company/mogovaa',
+    github: 'https://github.com/mogovaa',
+    twitter: 'https://twitter.com/mogovaa',
   },
 } as const;
