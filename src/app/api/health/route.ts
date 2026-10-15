@@ -1,1 +1,3 @@
-export { GET, HEAD, dynamic } from '../../health/route';
+export { GET, HEAD } from '../../health/route';
+
+export const dynamic = 'force-dynamic';
