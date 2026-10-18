@@ -109,7 +109,7 @@ function AdminLoginForm() {
           <div className="mx-auto mb-5 flex justify-center">
             <Image
               src="/logo.png"
-              alt="Mogovaa Technology"
+              alt="Magnovaa Technology"
               width={200}
               height={60}
               priority
@@ -126,7 +126,7 @@ function AdminLoginForm() {
             Administrator Gateway
           </h1>
           <p className="mt-2 text-sm text-slate-500">
-            Secure administrative control portal for Mogovaa Technology
+            Secure administrative control portal for Magnovaa Technology
           </p>
         </div>
 

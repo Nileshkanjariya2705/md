@@ -77,7 +77,7 @@ export function ReviewCard({ review }: ReviewCardProps) {
               <div className="relative h-13 w-13 overflow-hidden rounded-2xl ring-2 ring-emerald-500/30 ring-offset-2 ring-offset-white shadow-sm">
                 <Image
                   src={review.photo}
-                  alt={review.clientName}
+                  alt={`${review.clientName}, ${review.designation} at ${review.companyName}`}
                   fill
                   sizes="52px"
                   className="object-cover group-hover:scale-105 transition-transform duration-300"

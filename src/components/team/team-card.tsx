@@ -17,7 +17,7 @@ export function TeamCard({ member }: TeamCardProps) {
         <div className="relative mb-5 h-32 w-32 overflow-hidden rounded-2xl ring-2 ring-slate-200 group-hover:ring-teal-500/50 shadow-sm transition-all duration-300">
           <Image
             src={member.photo}
-            alt={member.name}
+            alt={`${member.name} - ${member.designation} at Magnovaa Technology`}
             fill
             sizes="128px"
             className="object-cover transition-transform duration-500 group-hover:scale-105"

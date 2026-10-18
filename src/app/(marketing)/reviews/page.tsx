@@ -10,9 +10,44 @@ import { getPublishedReviews } from '@/features/reviews/services/review.service'
 import { Star, ShieldCheck, Award, ThumbsUp, Sparkles, Building2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Client Reviews & Endorsements | Mogovaa Technology',
+  title: 'Client Reviews, Ratings & Endorsements',
   description:
-    'Read authentic verified reviews and endorsements from founders, CTOs, and product executives who trust Mogovaa Technology for digital engineering.',
+    'Read authentic verified reviews and endorsements from founders, CTOs, and product executives who trust Magnovaa Technology for digital engineering.',
+  alternates: {
+    canonical: 'https://magnovaa.com/reviews',
+  },
+  openGraph: {
+    title: 'Client Reviews, Ratings & Endorsements | Magnovaa Technology',
+    description:
+      'Read authentic verified reviews and endorsements from founders, CTOs, and product executives who trust Magnovaa Technology for digital engineering.',
+    url: 'https://magnovaa.com/reviews',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Client Reviews, Ratings & Endorsements | Magnovaa Technology',
+    description:
+      'Read authentic verified reviews and endorsements from founders, CTOs, and product executives who trust Magnovaa Technology for digital engineering.',
+  },
+};
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://magnovaa.com',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Reviews',
+      item: 'https://magnovaa.com/reviews',
+    },
+  ],
 };
 
 const STATS = [
@@ -47,12 +82,17 @@ export default async function ReviewsPage() {
 
   return (
     <div className="py-12 sm:py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Container>
         {/* Page Heading */}
         <SectionHeading
+          as="h1"
           badge="Client Endorsements"
           title="Proven Execution. Endorsed by Technology Leaders."
-          description="Read authentic experiences from technology founders, CTOs, and digital leaders who trust Mogovaa Technology to build, modernize, and scale their core platforms."
+          description="Read authentic experiences from technology founders, CTOs, and digital leaders who trust Magnovaa Technology to build, modernize, and scale their core platforms."
         />
 
         {/* Stats Showcase */}
@@ -98,7 +138,7 @@ export default async function ReviewsPage() {
               Direct Senior Ownership. Never Subcontracted.
             </h3>
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-6">
-              When you engage Mogovaa Technology, your product is personally architected and implemented by principal engineers. We maintain transparent sprint burndowns, shared Slack channels, and automated code review pipelines.
+              When you engage Magnovaa Technology, your product is personally architected and implemented by principal engineers. We maintain transparent sprint burndowns, shared Slack channels, and automated code review pipelines.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-teal-200/60 text-xs font-bold text-slate-700">
               <div className="flex items-center gap-2">

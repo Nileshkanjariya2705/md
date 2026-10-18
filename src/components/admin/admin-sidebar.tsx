@@ -39,7 +39,7 @@ export function AdminSidebar() {
           <Link href="/admin/dashboard" className="flex items-center gap-2.5">
             <Image
               src="/logo.png"
-              alt="Mogovaa Technology"
+              alt="Magnovaa Technology"
               width={160}
               height={45}
               className="h-8 w-auto object-contain"

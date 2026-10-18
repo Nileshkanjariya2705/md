@@ -19,7 +19,7 @@ export function TeamPreview({ team }: TeamPreviewProps) {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <SectionHeading
             badge="Leadership"
-            title="The Minds Behind Mogovaa"
+            title="The Minds Behind Magnovaa"
             description="Our leadership team combines deep technical expertise from premier engineering organizations with a relentless passion for perfection."
             align="left"
             className="mb-0 max-w-2xl"

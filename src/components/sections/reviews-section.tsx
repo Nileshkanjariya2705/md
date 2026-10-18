@@ -22,7 +22,7 @@ export function ReviewsSection({ reviews }: ReviewsSectionProps) {
         <SectionHeading
           badge="Endorsements"
           title="Trusted by Visionary Founders & Engineering Leaders"
-          description="Read authentic feedback from the technology executives and product directors who build their businesses with Mogovaa."
+          description="Read authentic feedback from the technology executives and product directors who build their businesses with Magnovaa."
         />
 
         <MobileCardScroll gridClassName="md:grid-cols-2 lg:grid-cols-3 md:gap-8">

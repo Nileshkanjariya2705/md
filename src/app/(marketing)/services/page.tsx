@@ -25,9 +25,104 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Engineering & Technology Services | Mogovaa Technology',
+  title: 'Enterprise Software & Cloud Engineering Services',
   description:
     'Full-cycle software engineering across Node.js/React, Python & AI/ML, React Native, .NET, Java, WordPress, Laravel, DevOps, and UI/UX design.',
+  alternates: {
+    canonical: 'https://magnovaa.com/services',
+  },
+  openGraph: {
+    title: 'Enterprise Software & Cloud Engineering Services | Magnovaa Technology',
+    description:
+      'Full-cycle software engineering across Node.js/React, Python & AI/ML, React Native, .NET, Java, WordPress, Laravel, DevOps, and UI/UX design.',
+    url: 'https://magnovaa.com/services',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Enterprise Software & Cloud Engineering Services | Magnovaa Technology',
+    description:
+      'Full-cycle software engineering across Node.js/React, Python & AI/ML, React Native, .NET, Java, WordPress, Laravel, DevOps, and UI/UX design.',
+  },
+};
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://magnovaa.com',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Services',
+      item: 'https://magnovaa.com/services',
+    },
+  ],
+};
+
+const servicesJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Software Development & Cloud Engineering',
+  provider: {
+    '@type': 'Organization',
+    name: 'Magnovaa Technology',
+    url: 'https://magnovaa.com',
+  },
+  areaServed: 'Worldwide',
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Software Engineering Services',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Node.js & React.js Web Development',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Python & Generative AI/ML Engineering',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'React Native Mobile App Development',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: '.NET Enterprise Solutions',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Enterprise Java Architecture',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Cloud Infrastructure & DevOps CI/CD',
+        },
+      },
+    ],
+  },
 };
 
 const SERVICES_DETAILED = [
@@ -212,6 +307,14 @@ const ARCHITECTURAL_PILLARS = [
 export default function ServicesPage() {
   return (
     <div className="py-12 sm:py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}
+      />
       <Container>
         {/* Page Hero */}
         <div className="max-w-4xl mx-auto text-center mb-20">

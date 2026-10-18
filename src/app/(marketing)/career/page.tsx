@@ -21,9 +21,44 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Careers & Opportunities | Mogovaa Technology',
+  title: 'Engineering Careers & Opportunities',
   description:
     'Join our elite team of engineers, architects, and product designers building high-concurrency systems, AI engines, and enterprise software.',
+  alternates: {
+    canonical: 'https://magnovaa.com/career',
+  },
+  openGraph: {
+    title: 'Engineering Careers & Opportunities | Magnovaa Technology',
+    description:
+      'Join our elite team of engineers, architects, and product designers building high-concurrency systems, AI engines, and enterprise software.',
+    url: 'https://magnovaa.com/career',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Engineering Careers & Opportunities | Magnovaa Technology',
+    description:
+      'Join our elite team of engineers, architects, and product designers building high-concurrency systems, AI engines, and enterprise software.',
+  },
+};
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://magnovaa.com',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Career',
+      item: 'https://magnovaa.com/career',
+    },
+  ],
 };
 
 const BENEFITS = [
@@ -140,10 +175,15 @@ const OPEN_ROLES = [
 export default function CareerPage() {
   return (
     <div className="py-12 sm:py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Container>
         {/* Page Hero */}
         <SectionHeading
-          badge="Careers at Mogovaa Technology"
+          as="h1"
+          badge="Careers at Magnovaa Technology"
           title="Build the Future of High-Scale Systems"
           description="We are an elite, highly autonomous collective of technologists solving hard distributed systems, AI, and design challenges. We do not do mundane work."
         />
@@ -152,7 +192,7 @@ export default function CareerPage() {
         <div className="mb-24">
           <div className="text-center max-w-xl mx-auto mb-12">
             <span className="text-xs font-bold uppercase tracking-wider text-teal-600">
-              Why Engineers Choose Mogovaa
+              Why Engineers Choose Magnovaa
             </span>
             <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">
               Built for Builder Autonomy & Well-being

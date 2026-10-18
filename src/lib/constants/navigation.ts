@@ -19,13 +19,13 @@ export const ADMIN_NAV_LINKS = [
 ] as const;
 
 export const SITE_CONFIG = {
-  name: 'Mogovaa',
-  fullName: 'Mogovaa Technology',
+  name: 'Magnovaa',
+  fullName: 'Magnovaa Technology',
   tagline: 'AI-Powered Enterprise Software & Digital Solutions',
   description:
-    'Mogovaa Technology engineers high-concurrency systems, generative AI platforms, cloud architectures, and bespoke software solutions worldwide.',
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://mogovaa.com',
-  email: 'hello@mogovaa.com',
+    'Magnovaa Technology engineers high-concurrency systems, generative AI platforms, cloud architectures, and bespoke software solutions worldwide.',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://magnovaa.com',
+  email: 'hello@magnovaa.com',
   phone: '+1 (555) 000-0000',
   address: {
     street: '123 Innovation Drive',
@@ -35,8 +35,8 @@ export const SITE_CONFIG = {
     country: 'US',
   },
   social: {
-    linkedin: 'https://linkedin.com/company/mogovaa',
-    github: 'https://github.com/mogovaa',
-    twitter: 'https://twitter.com/mogovaa',
+    linkedin: 'https://linkedin.com/company/magnovaa',
+    github: 'https://github.com/magnovaa',
+    twitter: 'https://twitter.com/magnovaa',
   },
 } as const;

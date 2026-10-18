@@ -10,7 +10,42 @@ import { Target, Compass, Zap, Shield, HeartHandshake, Lightbulb } from 'lucide-
 export const metadata: Metadata = {
   title: 'About Us',
   description:
-    'Learn about Mogovaa Technology, our engineering principles, mission, leadership, and our dedication to digital excellence.',
+    'Learn about Magnovaa Technology, our engineering principles, mission, leadership, and our dedication to digital excellence.',
+  alternates: {
+    canonical: 'https://magnovaa.com/about',
+  },
+  openGraph: {
+    title: 'About Us | Magnovaa Technology',
+    description:
+      'Learn about Magnovaa Technology, our engineering principles, mission, leadership, and our dedication to digital excellence.',
+    url: 'https://magnovaa.com/about',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Us | Magnovaa Technology',
+    description:
+      'Learn about Magnovaa Technology, our engineering principles, mission, leadership, and our dedication to digital excellence.',
+  },
+};
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://magnovaa.com',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'About',
+      item: 'https://magnovaa.com/about',
+    },
+  ],
 };
 
 const VALUES = [
@@ -41,13 +76,17 @@ export default async function AboutPage() {
 
   return (
     <div className="py-12 sm:py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       {/* Hero */}
       <section className="relative overflow-hidden pb-20">
         <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-teal-500/10 blur-[140px] rounded-full" />
 
         <Container className="relative z-10 text-center max-w-4xl">
           <div className="inline-flex items-center gap-2 rounded-full border border-teal-200 bg-teal-50 px-4 py-1.5 text-xs font-semibold text-teal-800 mb-6 uppercase tracking-wider">
-            About Mogovaa Technology
+            About Magnovaa Technology
           </div>
           <h1 className="text-4xl sm:text-6xl font-black text-slate-900 tracking-tight leading-[1.1]">
             Engineering What&apos;s Next with{' '}
@@ -56,7 +95,7 @@ export default async function AboutPage() {
             </span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-slate-600 leading-relaxed font-normal">
-            Founded by veteran software architects, Mogovaa Technology was established to bridge the divide between corporate development agencies and high-velocity boutique product studios. We craft software that empowers visionary companies.
+            Founded by veteran software architects, Magnovaa Technology was established to bridge the divide between corporate development agencies and high-velocity boutique product studios. We craft software that empowers visionary companies.
           </p>
         </Container>
       </section>
@@ -95,7 +134,7 @@ export default async function AboutPage() {
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-slate-200 shadow-xl">
               <Image
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80"
-                alt="MD engineering team collaboration"
+                alt="Magnovaa engineering team collaboration"
                 fill
                 className="object-cover"
               />

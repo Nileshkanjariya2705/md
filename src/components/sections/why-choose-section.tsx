@@ -42,7 +42,7 @@ export function WhyChooseSection() {
     <section className="py-24 bg-white relative">
       <Container>
         <SectionHeading
-          badge="The MD Advantage"
+          badge="The Magnovaa Advantage"
           title="Why Forward-Thinking Leaders Partner With Us"
           description="We combine engineering excellence with business pragmatism to deliver software that produces measurable enterprise outcomes."
         />

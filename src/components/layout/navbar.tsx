@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
-import { NAV_LINKS, SITE_CONFIG } from '@/lib/constants/navigation';
+import { NAV_LINKS } from '@/lib/constants/navigation';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils/cn';
 
@@ -14,45 +14,50 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const [prevPathname, setPrevPathname] = useState(pathname);
+
+  // Close mobile menu if route changed
+  if (prevPathname !== pathname) {
+    setPrevPathname(pathname);
+    setMobileMenuOpen(false);
+  }
 
   useEffect(() => {
-    setMounted(true);
+    const frame = requestAnimationFrame(() => setMounted(true));
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
-  // Close mobile menu when navigating
-  useEffect(() => {
-    setMobileMenuOpen(false);
-  }, [pathname]);
-
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-3 sm:px-6 pt-3 sm:pt-4">
+    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-3 sm:px-6 pt-2 sm:pt-2.5">
       <nav
         aria-label="Main Navigation"
         className={cn(
-          'mx-auto max-w-7xl rounded-2xl transition-all duration-300 px-4 sm:px-6 py-3 sm:py-3.5 flex items-center justify-between',
+          'mx-auto max-w-7xl rounded-2xl transition-all duration-300 px-3 sm:px-5 h-[52px] sm:h-[60px] flex items-center justify-between',
           isScrolled
             ? 'bg-white/90 backdrop-blur-xl border border-slate-200/90 shadow-md shadow-slate-200/50'
             : 'bg-white/75 backdrop-blur-md border border-slate-200/70 shadow-sm'
         )}
       >
-        {/* Brand Logo */}
+        {/* Brand Logo - takes ~90% of header height */}
         <Link
           href="/"
-          className="flex items-center gap-2.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600 rounded-lg py-1 px-0.5"
-          aria-label="Mogovaa Technology Home"
+          className="flex items-center h-full group focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600 rounded-lg shrink-0"
+          aria-label="Magnovaa Technology Home"
         >
           <Image
             src="/logo.png"
-            alt="Mogovaa Technology Logo"
-            width={180}
-            height={55}
+            alt="Magnovaa Technology Logo"
+            width={240}
+            height={85}
             priority
-            className="h-8 sm:h-9 md:h-10 w-auto object-contain transition-transform group-hover:scale-105"
+            className="h-[46px] sm:h-[54px] max-h-[92%] w-auto object-contain transition-transform group-hover:scale-105"
           />
         </Link>
 
@@ -99,7 +104,7 @@ export function Navbar() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="rounded-xl p-2 text-slate-700 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-teal-600"
+            className="rounded-xl p-1.5 text-slate-700 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-teal-600"
             aria-expanded={mobileMenuOpen}
             aria-label="Toggle navigation menu"
           >

@@ -8,14 +8,54 @@ import { Mail, MapPin, Phone, Clock, ShieldCheck, Sparkles } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'Contact Us & Technical Scoping',
   description:
-    'Initiate a conversation with Mogovaa Technology principal architects regarding new product builds, cloud migrations, or dedicated engineering squads.',
+    'Initiate a conversation with Magnovaa Technology principal architects regarding new product builds, cloud migrations, or dedicated engineering squads.',
+  alternates: {
+    canonical: 'https://magnovaa.com/contact',
+  },
+  openGraph: {
+    title: 'Contact Us & Technical Scoping | Magnovaa Technology',
+    description:
+      'Initiate a conversation with Magnovaa Technology principal architects regarding new product builds, cloud migrations, or dedicated engineering squads.',
+    url: 'https://magnovaa.com/contact',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact Us & Technical Scoping | Magnovaa Technology',
+    description:
+      'Initiate a conversation with Magnovaa Technology principal architects regarding new product builds, cloud migrations, or dedicated engineering squads.',
+  },
+};
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://magnovaa.com',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Contact',
+      item: 'https://magnovaa.com/contact',
+    },
+  ],
 };
 
 export default function ContactPage() {
   return (
     <div className="py-12 sm:py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Container>
         <SectionHeading
+          as="h1"
           badge="Direct Inquiries"
           title="Let's Discuss Your Architectural Vision"
           description="Speak directly with our senior technical partners. Tell us about your goals, timelines, or infrastructure challenges."

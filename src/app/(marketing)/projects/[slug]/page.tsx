@@ -30,10 +30,26 @@ export async function generateMetadata({
   return {
     title: project.title,
     description: project.shortDescription,
+    alternates: {
+      canonical: `https://magnovaa.com/projects/${project.slug}`,
+    },
     openGraph: {
-      title: `${project.title} | Mogovaa Technology Case Study`,
+      title: `${project.title} | Magnovaa Technology Case Study`,
       description: project.shortDescription,
-      images: [{ url: project.coverImage }],
+      url: `https://magnovaa.com/projects/${project.slug}`,
+      type: 'article',
+      images: [
+        {
+          url: project.coverImage,
+          alt: `${project.title} - ${project.category} case study`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${project.title} | Magnovaa Technology Case Study`,
+      description: project.shortDescription,
+      images: [project.coverImage],
     },
   };
 }
@@ -51,8 +67,60 @@ export default async function ProjectDetailPage({ params }: ProjectDetailProps) 
     notFound();
   }
 
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: project.title,
+    description: project.shortDescription,
+    image: project.coverImage,
+    url: `https://magnovaa.com/projects/${project.slug}`,
+    author: {
+      '@type': 'Organization',
+      name: 'Magnovaa Technology',
+      url: 'https://magnovaa.com',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Magnovaa Technology',
+      logo: 'https://magnovaa.com/logo.png',
+    },
+  };
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://magnovaa.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Projects',
+        item: 'https://magnovaa.com/projects',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: project.title,
+        item: `https://magnovaa.com/projects/${project.slug}`,
+      },
+    ],
+  };
+
   return (
     <article className="py-12 sm:py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Container>
         {/* Back Link */}
         <div className="mb-8">
@@ -119,7 +187,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailProps) 
         <div className="relative aspect-[16/9] w-full rounded-3xl overflow-hidden border border-slate-200 shadow-xl mb-16">
           <Image
             src={project.coverImage}
-            alt={project.title}
+            alt={`${project.title} - ${project.category} case study overview`}
             fill
             priority
             sizes="(max-width: 1280px) 100vw, 1200px"

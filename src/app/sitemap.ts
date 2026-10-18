@@ -2,22 +2,24 @@ import { MetadataRoute } from 'next';
 import { getPublishedProjects } from '@/features/projects/services/project.service';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://mogovaa.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://magnovaa.com';
 
   const staticRoutes = [
-    '',
-    '/about',
-    '/projects',
-    '/team',
-    '/services',
-    '/career',
-    '/reviews',
-    '/contact',
+    { path: '', changeFreq: 'daily' as const, priority: 1.0 },
+    { path: '/services', changeFreq: 'weekly' as const, priority: 0.9 },
+    { path: '/projects', changeFreq: 'weekly' as const, priority: 0.9 },
+    { path: '/about', changeFreq: 'monthly' as const, priority: 0.8 },
+    { path: '/team', changeFreq: 'monthly' as const, priority: 0.8 },
+    { path: '/career', changeFreq: 'weekly' as const, priority: 0.8 },
+    { path: '/reviews', changeFreq: 'weekly' as const, priority: 0.8 },
+    { path: '/contact', changeFreq: 'monthly' as const, priority: 0.8 },
+    { path: '/privacy', changeFreq: 'yearly' as const, priority: 0.5 },
+    { path: '/terms', changeFreq: 'yearly' as const, priority: 0.5 },
   ].map((route) => ({
-    url: `${baseUrl}${route}`,
+    url: `${baseUrl}${route.path}`,
     lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: route === '' ? 1.0 : 0.8,
+    changeFrequency: route.changeFreq,
+    priority: route.priority,
   }));
 
   const projects = await getPublishedProjects();

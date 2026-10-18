@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils/cn';
 
 const FAQS = [
   {
-    question: 'How does MD structure client engagements?',
+    question: 'How does Magnovaa structure client engagements?',
     answer:
       'We operate primarily on dedicated engineering squad models or fixed-scope milestone engagements. For long-term initiatives, we embed senior architects and engineers directly alongside your leadership, aligning seamlessly with your sprint cycles.',
   },

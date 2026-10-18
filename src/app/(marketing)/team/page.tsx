@@ -10,9 +10,44 @@ import { getActiveTeamMembers } from '@/features/team/services/team.service';
 import { ShieldCheck, Award, Zap, Code2, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Our Team & Engineering Leadership | Mogovaa Technology',
+  title: 'Leadership & Senior Engineering Team',
   description:
-    'Meet the principal engineers, distributed systems architects, and product design leaders behind Mogovaa Technology.',
+    'Meet the principal engineers, distributed systems architects, and product design leaders behind Magnovaa Technology.',
+  alternates: {
+    canonical: 'https://magnovaa.com/team',
+  },
+  openGraph: {
+    title: 'Leadership & Senior Engineering Team | Magnovaa Technology',
+    description:
+      'Meet the principal engineers, distributed systems architects, and product design leaders behind Magnovaa Technology.',
+    url: 'https://magnovaa.com/team',
+    type: 'profile',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Leadership & Senior Engineering Team | Magnovaa Technology',
+    description:
+      'Meet the principal engineers, distributed systems architects, and product design leaders behind Magnovaa Technology.',
+  },
+};
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://magnovaa.com',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Team',
+      item: 'https://magnovaa.com/team',
+    },
+  ],
 };
 
 const TEAM_STATS = [
@@ -47,9 +82,14 @@ export default async function TeamPage() {
 
   return (
     <div className="py-12 sm:py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Container>
         {/* Page Heading */}
         <SectionHeading
+          as="h1"
           badge="Our Squad"
           title="Engineers, Architects & Innovators"
           description="We are an elite collective of senior technologists, distributed systems architects, and design leaders dedicated to building reliable, resilient, and beautifully crafted software."
@@ -92,7 +132,7 @@ export default async function TeamPage() {
           <div className="pointer-events-none absolute -right-20 -top-20 w-80 h-80 bg-teal-500/20 blur-[100px] rounded-full" />
           <div className="relative z-10 max-w-2xl">
             <span className="text-xs font-bold uppercase tracking-wider text-teal-400">
-              Careers at Mogovaa Technology
+              Careers at Magnovaa Technology
             </span>
             <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight mt-2 mb-4">
               Want to Build Mission-Critical Software With Us?

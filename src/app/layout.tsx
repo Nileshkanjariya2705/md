@@ -13,42 +13,46 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Mogovaa Technology',
-    default: 'Mogovaa Technology | AI-Powered Enterprise Software & Digital Solutions',
+    template: '%s | Magnovaa Technology',
+    default: 'Magnovaa Technology | AI-Powered Enterprise Software & Digital Solutions',
   },
   description:
-    'Mogovaa Technology engineers high-concurrency systems, generative AI platforms, cloud architectures, and bespoke software solutions worldwide.',
+    'Magnovaa Technology engineers high-concurrency systems, generative AI platforms, cloud architectures, and bespoke software solutions worldwide.',
   keywords: [
     'software engineering',
     'cloud architecture',
     'enterprise web apps',
     'AI solutions',
     'digital transformation',
-    'Mogovaa Technology',
-    'Mogovaa',
+    'Magnovaa Technology',
     'Magnovaa',
     'Full Stack Development',
     'Next.js',
     'React',
     'Python AI',
+    'magnovaa.com',
   ],
-  authors: [{ name: 'Mogovaa Technology', url: 'https://mogovaa.com' }],
-  creator: 'Mogovaa Technology',
-  publisher: 'Mogovaa Technology',
-  metadataBase: new URL('https://mogovaa.com'),
+  authors: [{ name: 'Magnovaa Technology', url: 'https://magnovaa.com' }],
+  creator: 'Magnovaa Technology',
+  publisher: 'Magnovaa Technology',
+  metadataBase: new URL('https://magnovaa.com'),
   alternates: {
-    canonical: 'https://mogovaa.com',
+    canonical: 'https://magnovaa.com',
   },
   icons: {
-    icon: '/icon.png',
-    apple: '/icon.png',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.png', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/apple-icon.png',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://mogovaa.com',
-    siteName: 'Mogovaa Technology',
-    title: 'Mogovaa Technology | AI-Powered Enterprise Software & Digital Solutions',
+    url: 'https://magnovaa.com',
+    siteName: 'Magnovaa Technology',
+    title: 'Magnovaa Technology | AI-Powered Enterprise Software & Digital Solutions',
     description:
       'We craft exceptional digital experiences that elevate brands and drive business growth through innovative technology solutions.',
     images: [
@@ -56,18 +60,18 @@ export const metadata: Metadata = {
         url: '/logo.png',
         width: 1024,
         height: 362,
-        alt: 'Mogovaa Technology Logo',
+        alt: 'Magnovaa Technology Logo',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mogovaa Technology | AI-Powered Enterprise Software & Digital Solutions',
+    title: 'Magnovaa Technology | AI-Powered Enterprise Software & Digital Solutions',
     description:
       'We craft exceptional digital experiences that elevate brands and drive business growth through innovative technology solutions.',
     images: ['/logo.png'],
-    site: '@mogovaa',
-    creator: '@mogovaa',
+    site: '@magnovaa',
+    creator: '@magnovaa',
   },
   robots: {
     index: true,
@@ -84,24 +88,48 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'Mogovaa Technology',
-  alternateName: ['Mogovaa', 'Magnovaa Technology'],
-  url: 'https://mogovaa.com',
-  logo: 'https://mogovaa.com/logo.png',
-  description:
-    'Mogovaa Technology engineers high-concurrency systems, generative AI platforms, and bespoke enterprise software for industry-leading organizations worldwide.',
-  email: 'hello@mogovaa.com',
-  sameAs: [
-    'https://linkedin.com/company/mogovaa',
-    'https://twitter.com/mogovaa',
-    'https://github.com/mogovaa',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': 'https://magnovaa.com/#organization',
+      name: 'Magnovaa Technology',
+      alternateName: ['Magnovaa', 'Magnovaa Tech'],
+      url: 'https://magnovaa.com',
+      logo: {
+        '@type': 'ImageObject',
+        '@id': 'https://magnovaa.com/#logo',
+        url: 'https://magnovaa.com/logo.png',
+        caption: 'Magnovaa Technology Logo',
+      },
+      image: {
+        '@id': 'https://magnovaa.com/#logo',
+      },
+      description:
+        'Magnovaa Technology engineers high-concurrency systems, generative AI platforms, and bespoke enterprise software for industry-leading organizations worldwide.',
+      email: 'hello@magnovaa.com',
+      sameAs: [
+        'https://linkedin.com/company/magnovaa',
+        'https://twitter.com/magnovaa',
+        'https://github.com/magnovaa',
+      ],
+      contactPoint: {
+        '@type': 'ContactPoint',
+        email: 'hello@magnovaa.com',
+        contactType: 'customer support',
+      },
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://magnovaa.com/#website',
+      url: 'https://magnovaa.com',
+      name: 'Magnovaa Technology',
+      description: 'AI-Powered Enterprise Software & Digital Solutions',
+      publisher: {
+        '@id': 'https://magnovaa.com/#organization',
+      },
+      inLanguage: 'en-US',
+    },
   ],
-  contactPoint: {
-    '@type': 'ContactPoint',
-    email: 'hello@mogovaa.com',
-    contactType: 'customer support',
-  },
 };
 
 export default function RootLayout({

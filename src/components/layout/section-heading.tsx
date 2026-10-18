@@ -7,6 +7,7 @@ interface SectionHeadingProps {
   description?: string;
   align?: 'left' | 'center';
   className?: string;
+  as?: 'h1' | 'h2';
 }
 
 export function SectionHeading({
@@ -15,8 +16,10 @@ export function SectionHeading({
   description,
   align = 'center',
   className,
+  as = 'h2',
 }: SectionHeadingProps) {
   const isCenter = align === 'center';
+  const HeadingTag = as;
 
   return (
     <div
@@ -36,9 +39,9 @@ export function SectionHeading({
           {badge}
         </div>
       )}
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.15]">
+      <HeadingTag className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.15]">
         {title}
-      </h2>
+      </HeadingTag>
       {description && (
         <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
           {description}

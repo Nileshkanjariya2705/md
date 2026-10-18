@@ -39,7 +39,7 @@ export function HeroSection() {
 
         {/* Subtitle */}
         <p className="mx-auto mt-6 max-w-2xl text-lg sm:text-xl text-slate-600 leading-relaxed font-normal">
-          MD designs and engineers high-throughput platforms, generative AI architectures, and resilient enterprise applications for category-defining businesses.
+          Magnovaa designs and engineers high-throughput platforms, generative AI architectures, and resilient enterprise applications for category-defining businesses.
         </p>
 
         {/* Actions */}

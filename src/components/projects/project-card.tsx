@@ -17,7 +17,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100">
         <Image
           src={project.coverImage}
-          alt={project.title}
+          alt={`${project.title} - ${project.category} case study by Magnovaa Technology`}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover transition-transform duration-500 group-hover:scale-105"
