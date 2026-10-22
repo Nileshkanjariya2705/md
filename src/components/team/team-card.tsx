@@ -11,10 +11,10 @@ interface TeamCardProps {
 
 export function TeamCard({ member }: TeamCardProps) {
   return (
-    <Card className="group overflow-hidden border-slate-200 bg-white hover:border-teal-500/40 transition-all duration-300 hover:shadow-xl p-6 flex flex-col items-center text-center justify-between">
+    <Card className="group overflow-hidden rounded-3xl border border-slate-200/90 bg-white hover:border-[#2f6bff]/40 transition-all duration-300 hover:shadow-[0_12px_32px_rgba(47,107,255,0.12)] p-6 flex flex-col items-center text-center justify-between">
       <div className="flex flex-col items-center w-full">
         {/* Photo with glow on hover */}
-        <div className="relative mb-5 h-32 w-32 overflow-hidden rounded-2xl ring-2 ring-slate-200 group-hover:ring-teal-500/50 shadow-sm transition-all duration-300">
+        <div className="relative mb-5 h-32 w-32 overflow-hidden rounded-3xl ring-2 ring-slate-200 group-hover:ring-[#2f6bff]/50 shadow-xs transition-all duration-300">
           <Image
             src={member.photo}
             alt={`${member.name} - ${member.designation} at Magnovaa Technology`}
@@ -26,19 +26,19 @@ export function TeamCard({ member }: TeamCardProps) {
 
         {/* Department Pill */}
         {member.department && (
-          <span className="text-[10px] uppercase font-bold tracking-wider text-teal-700 bg-teal-50 border border-teal-200/80 px-2.5 py-0.5 rounded-full mb-2">
+          <span className="text-[10px] uppercase font-bold tracking-wider text-[#2f6bff] bg-[#2f6bff]/8 border border-[#2f6bff]/20 px-2.5 py-0.5 rounded-full mb-2">
             {member.department}
           </span>
         )}
 
         {/* Info */}
-        <h3 className="text-lg font-bold text-slate-900 group-hover:text-teal-600 transition-colors">
+        <h3 className="text-lg font-bold text-[#14233a] group-hover:text-[#2f6bff] transition-colors">
           {member.name}
         </h3>
-        <p className="text-xs font-semibold uppercase tracking-wider text-teal-600 mt-0.5 mb-3">
+        <p className="text-xs font-semibold uppercase tracking-wider text-[#2f6bff] mt-0.5 mb-3">
           {member.designation}
         </p>
-        <p className="text-sm text-slate-600 leading-relaxed line-clamp-3 mb-4">
+        <p className="text-sm text-[#64748b] leading-relaxed line-clamp-3 mb-4">
           {member.bio}
         </p>
 
@@ -48,7 +48,7 @@ export function TeamCard({ member }: TeamCardProps) {
             {member.skills.slice(0, 3).map((skill) => (
               <span
                 key={skill}
-                className="text-[11px] font-medium text-slate-600 bg-slate-100 rounded-md px-2 py-0.5"
+                className="text-[11px] font-medium text-slate-600 bg-slate-100 rounded-md px-2 py-0.5 group-hover:bg-[#2f6bff]/8 group-hover:text-[#2f6bff] transition-colors"
               >
                 {skill}
               </span>
@@ -65,7 +65,7 @@ export function TeamCard({ member }: TeamCardProps) {
             target="_blank"
             rel="noreferrer"
             aria-label={`${member.name} LinkedIn`}
-            className="p-2 rounded-lg bg-slate-100 text-slate-600 hover:text-teal-600 hover:bg-slate-200 transition-colors"
+            className="p-2 rounded-full bg-slate-100 text-slate-600 hover:text-[#2f6bff] hover:bg-[#2f6bff]/10 transition-colors"
           >
             <LinkedinIcon className="h-4 w-4" />
           </a>
@@ -76,7 +76,7 @@ export function TeamCard({ member }: TeamCardProps) {
             target="_blank"
             rel="noreferrer"
             aria-label={`${member.name} GitHub`}
-            className="p-2 rounded-lg bg-slate-100 text-slate-600 hover:text-teal-600 hover:bg-slate-200 transition-colors"
+            className="p-2 rounded-full bg-slate-100 text-slate-600 hover:text-[#2f6bff] hover:bg-[#2f6bff]/10 transition-colors"
           >
             <GithubIcon className="h-4 w-4" />
           </a>
@@ -87,7 +87,7 @@ export function TeamCard({ member }: TeamCardProps) {
             target="_blank"
             rel="noreferrer"
             aria-label={`${member.name} Website`}
-            className="p-2 rounded-lg bg-slate-100 text-slate-600 hover:text-teal-600 hover:bg-slate-200 transition-colors"
+            className="p-2 rounded-full bg-slate-100 text-slate-600 hover:text-[#2f6bff] hover:bg-[#2f6bff]/10 transition-colors"
           >
             <Globe className="h-4 w-4" />
           </a>

@@ -6,11 +6,9 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { CTASection } from '@/components/sections/cta-section';
 import {
-  Briefcase,
   MapPin,
   Clock,
   ArrowRight,
-  Sparkles,
   Heart,
   Laptop,
   GraduationCap,
@@ -191,13 +189,13 @@ export default function CareerPage() {
         {/* Benefits & Perks */}
         <div className="mb-24">
           <div className="text-center max-w-xl mx-auto mb-12">
-            <span className="text-xs font-bold uppercase tracking-wider text-teal-600">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#2f6bff]">
               Why Engineers Choose Magnovaa
             </span>
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-[#14233a] mt-2">
               Built for Builder Autonomy & Well-being
             </h3>
-            <p className="text-sm text-slate-600 mt-2">
+            <p className="text-sm text-[#64748b] mt-2">
               We treat engineers as creative founders, providing every resource to do your life&apos;s best work.
             </p>
           </div>
@@ -208,13 +206,13 @@ export default function CareerPage() {
               return (
                 <div
                   key={idx}
-                  className="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm hover:border-teal-500/40 hover:shadow-lg transition-all duration-300"
+                  className="rounded-2xl border border-slate-200/90 bg-white p-7 shadow-xs hover:border-[#2f6bff]/40 hover:shadow-md transition-all duration-300"
                 >
-                  <div className="h-12 w-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center mb-5">
+                  <div className="h-12 w-12 rounded-xl bg-[#2f6bff]/8 text-[#2f6bff] flex items-center justify-center mb-5">
                     <Icon className="h-6 w-6" />
                   </div>
-                  <h4 className="text-lg font-bold text-slate-900 mb-2">{benefit.title}</h4>
-                  <p className="text-sm text-slate-600 leading-relaxed">{benefit.description}</p>
+                  <h4 className="text-lg font-bold text-[#14233a] mb-2">{benefit.title}</h4>
+                  <p className="text-sm text-[#64748b] leading-relaxed">{benefit.description}</p>
                 </div>
               );
             })}
@@ -225,10 +223,10 @@ export default function CareerPage() {
         <div className="space-y-8" id="open-roles">
           <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-slate-200 pb-6">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-teal-600">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#2f6bff]">
                 Join The Squad
               </span>
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-[#14233a] mt-1">
                 Open Engineering & Design Positions
               </h3>
             </div>
@@ -241,12 +239,12 @@ export default function CareerPage() {
             {OPEN_ROLES.map((role) => (
               <Card
                 key={role.id}
-                className="p-8 sm:p-10 border-slate-200 bg-white hover:border-teal-500/50 hover:shadow-xl transition-all duration-300"
+                className="p-8 sm:p-10 border-slate-200/90 bg-white hover:border-[#2f6bff]/40 hover:shadow-xl transition-all duration-300 rounded-3xl"
               >
                 <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-slate-100">
                   <div>
                     <div className="flex flex-wrap items-center gap-2 mb-3">
-                      <span className="rounded-full bg-teal-50 text-teal-700 border border-teal-200/80 px-3 py-1 text-xs font-bold">
+                      <span className="rounded-full bg-[#2f6bff]/8 text-[#2f6bff] border border-[#2f6bff]/20 px-3 py-1 text-xs font-bold">
                         {role.department}
                       </span>
                       <span className="flex items-center gap-1 text-xs text-slate-500 font-medium">
@@ -263,12 +261,12 @@ export default function CareerPage() {
                         {role.experience}
                       </span>
                     </div>
-                    <h4 className="text-xl sm:text-2xl font-bold text-slate-900 hover:text-teal-600 transition-colors">
+                    <h4 className="text-xl sm:text-2xl font-bold text-[#14233a] hover:text-[#2f6bff] transition-colors">
                       {role.title}
                     </h4>
                   </div>
 
-                  <Button asChild size="lg" className="rounded-xl shrink-0 shadow-sm">
+                  <Button asChild size="lg" className="rounded-full shrink-0 shadow-sm">
                     <Link href={`/contact?subject=${encodeURIComponent(`Career Application: ${role.title}`)}`}>
                       Apply For Role <ArrowRight className="h-4 w-4 ml-1.5" />
                     </Link>
@@ -276,7 +274,7 @@ export default function CareerPage() {
                 </div>
 
                 <div className="pt-6">
-                  <p className="text-sm text-slate-600 leading-relaxed mb-6">
+                  <p className="text-sm text-[#64748b] leading-relaxed mb-6">
                     {role.description}
                   </p>
 
@@ -286,7 +284,7 @@ export default function CareerPage() {
                     </h5>
                     {role.requirements.map((req, rIdx) => (
                       <div key={rIdx} className="flex items-start gap-2.5 text-xs text-slate-700">
-                        <CheckCircle2 className="h-4 w-4 text-teal-600 shrink-0 mt-0.5" />
+                        <CheckCircle2 className="h-4 w-4 text-[#2f6bff] shrink-0 mt-0.5" />
                         <span>{req}</span>
                       </div>
                     ))}
@@ -298,8 +296,8 @@ export default function CareerPage() {
         </div>
 
         {/* General Application Banner */}
-        <div className="mt-16 rounded-3xl bg-slate-900 text-white p-8 sm:p-12 relative overflow-hidden">
-          <div className="pointer-events-none absolute -right-20 -top-20 w-80 h-80 bg-teal-500/20 blur-[90px] rounded-full" />
+        <div className="mt-16 rounded-3xl border border-slate-800 bg-gradient-to-b from-[#14233a] to-[#0b1320] text-white p-8 sm:p-12 relative overflow-hidden shadow-2xl">
+          <div className="pointer-events-none absolute -right-20 -top-20 w-80 h-80 bg-[#2f6bff]/20 blur-[90px] rounded-full" />
           <div className="relative z-10 max-w-2xl">
             <h4 className="text-2xl font-bold tracking-tight mb-3">
               Don&apos;t see your exact role listed?
@@ -307,7 +305,7 @@ export default function CareerPage() {
             <p className="text-sm text-slate-300 leading-relaxed mb-6">
               We are constantly scouting for exceptional minds in distributed infrastructure, generative AI research, and compiler engineering. Send us your GitHub, portfolio, or proudest project.
             </p>
-            <Button asChild variant="secondary" size="lg" className="rounded-xl">
+            <Button asChild variant="outline" size="lg" className="rounded-full border-white/20 text-white hover:bg-white/10 hover:border-white/40">
               <Link href="/contact?subject=General+Engineering+Application">
                 Send Speculative Pitch <ArrowRight className="h-4 w-4 ml-1.5" />
               </Link>

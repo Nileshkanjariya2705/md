@@ -59,25 +59,25 @@ export function FAQSection() {
                 className={cn(
                   'rounded-2xl border transition-all duration-200 overflow-hidden',
                   isOpen
-                    ? 'border-teal-500/40 bg-teal-50/40 shadow-sm'
-                    : 'border-slate-200 bg-slate-50/70 hover:border-slate-300'
+                    ? 'border-[#2f6bff]/30 bg-[#2f6bff]/2 shadow-xs'
+                    : 'border-slate-200/90 bg-white hover:border-slate-300'
                 )}
               >
                 <button
                   type="button"
                   onClick={() => toggle(idx)}
-                  className="flex w-full items-center justify-between p-6 text-left focus:outline-none"
+                  className="flex w-full items-center justify-between p-6 text-left focus:outline-none cursor-pointer"
                   aria-expanded={isOpen}
                 >
-                  <span className="text-base sm:text-lg font-bold text-slate-900 pr-4">
+                  <span className="text-base sm:text-lg font-bold text-[#14233a] pr-4">
                     {faq.question}
                   </span>
                   <div
                     className={cn(
                       'rounded-full p-1.5 transition-transform duration-300 shrink-0',
                       isOpen
-                        ? 'rotate-180 bg-teal-100 text-teal-700'
-                        : 'bg-slate-200 text-slate-600'
+                        ? 'rotate-180 bg-[#2f6bff]/10 text-[#2f6bff]'
+                        : 'bg-slate-100 text-slate-500'
                     )}
                   >
                     <ChevronDown className="h-4 w-4" />
@@ -85,7 +85,7 @@ export function FAQSection() {
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 pt-1 text-sm sm:text-base text-slate-600 leading-relaxed border-t border-slate-200/60 animate-reveal visible">
+                  <div className="px-6 pb-6 pt-1 text-sm sm:text-base text-[#64748b] leading-relaxed border-t border-slate-100 animate-reveal visible">
                     {faq.answer}
                   </div>
                 )}

@@ -25,7 +25,7 @@ export function TeamPreview({ team }: TeamPreviewProps) {
             className="mb-0 max-w-2xl"
           />
           <div className="mt-6 md:mt-0">
-            <Button asChild variant="outline" className="rounded-xl">
+            <Button asChild variant="outline" className="rounded-full">
               <Link href="/team" className="gap-2">
                 Meet Full Team <ArrowRight className="h-4 w-4" />
               </Link>
@@ -41,7 +41,7 @@ export function TeamPreview({ team }: TeamPreviewProps) {
 
         {/* Explore More Team Button */}
         <div className="mt-12 text-center">
-          <Button asChild size="lg" className="rounded-xl px-8 shadow-sm">
+          <Button asChild size="lg" className="rounded-full px-8 shadow-sm">
             <Link href="/team" className="gap-2">
               Explore More Team Members <ArrowRight className="h-4 w-4" />
             </Link>

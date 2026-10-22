@@ -32,18 +32,18 @@ export function SectionHeading({
       {badge && (
         <div
           className={cn(
-            'inline-flex items-center gap-2 rounded-full border border-teal-200 bg-teal-50 px-3.5 py-1 text-xs font-semibold text-teal-700 tracking-wide uppercase mb-4 shadow-sm'
+            'inline-flex items-center gap-2 rounded-full border border-[#2f6bff]/20 bg-[#2f6bff]/6 px-3.5 py-1 text-[11px] font-bold text-[#2f6bff] tracking-wider uppercase mb-4 shadow-xs'
           )}
         >
-          <span className="h-1.5 w-1.5 rounded-full bg-teal-500 animate-pulse" />
+          <span className="h-1.5 w-1.5 rounded-full bg-[#2f6bff] animate-pulse" />
           {badge}
         </div>
       )}
-      <HeadingTag className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.15]">
+      <HeadingTag className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#14233a] leading-[1.15]">
         {title}
       </HeadingTag>
       {description && (
-        <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
+        <p className="mt-4 text-base sm:text-lg text-[#64748b] leading-relaxed font-normal">
           {description}
         </p>
       )}

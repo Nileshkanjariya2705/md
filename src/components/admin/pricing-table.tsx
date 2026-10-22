@@ -14,9 +14,8 @@ import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from '@
 import { Button } from '@/components/ui/button';
 import { Switch } from '@/components/ui/switch';
 import { Input } from '@/components/ui/input';
-import { Badge } from '@/components/ui/badge';
 import { ConfirmDialog } from './confirm-dialog';
-import { Edit2, Trash2, Search, Plus, Sparkles, Zap, Layers } from 'lucide-react';
+import { Edit2, Trash2, Search, Plus } from 'lucide-react';
 
 interface PricingTableProps {
   initialPlans: PricingPlan[];
@@ -147,7 +146,7 @@ export function PricingTable({ initialPlans }: PricingTableProps) {
                       <span className="text-[11px] text-slate-400">/{plan.billingPeriod}</span>
                     </TableCell>
                     <TableCell>
-                      <div className="text-sm font-bold text-teal-700">
+                      <div className="text-sm font-bold text-[#2f6bff]">
                         {formattedQuarterly}
                       </div>
                       <span className="text-[11px] text-slate-400">/quarter</span>
@@ -178,7 +177,7 @@ export function PricingTable({ initialPlans }: PricingTableProps) {
                           asChild
                           variant="ghost"
                           size="icon"
-                          className="h-8 w-8 text-slate-600 hover:text-teal-600 hover:bg-teal-50"
+                          className="h-8 w-8 text-slate-600 hover:text-[#2f6bff] hover:bg-[#2f6bff]/10"
                         >
                           <Link href={`/admin/pricing/${plan.id}/edit`}>
                             <Edit2 className="h-4 w-4" />

@@ -34,9 +34,9 @@ export function ProjectGrid({ initialProjects }: ProjectGridProps) {
               type="button"
               onClick={() => setSelectedCategory(cat)}
               className={cn(
-                'rounded-full px-4 py-2 text-xs sm:text-sm font-semibold transition-all duration-200 border',
+                'rounded-full px-4 py-2 text-xs sm:text-sm font-semibold transition-all duration-200 border cursor-pointer',
                 isSelected
-                  ? 'bg-teal-600 text-white border-teal-600 shadow-sm'
+                  ? 'bg-gradient-to-r from-[#2f6bff] to-[#4f8aff] text-white border-[#2f6bff] shadow-[0_4px_14px_rgba(47,107,255,0.25)] -translate-y-0.5'
                   : 'bg-white text-slate-700 border-slate-200 hover:border-slate-300 hover:bg-slate-50'
               )}
             >
@@ -56,14 +56,14 @@ export function ProjectGrid({ initialProjects }: ProjectGridProps) {
       ) : (
         <div className="rounded-3xl border border-slate-200 bg-white p-16 text-center max-w-md mx-auto shadow-sm">
           <Layers className="h-12 w-12 text-slate-400 mx-auto mb-4" />
-          <h3 className="text-lg font-bold text-slate-900 mb-1">No Projects Found</h3>
-          <p className="text-sm text-slate-500 mb-6">
+          <h3 className="text-lg font-bold text-[#14233a] mb-1">No Projects Found</h3>
+          <p className="text-sm text-[#64748b] mb-6">
             There are no projects currently published in the &ldquo;{selectedCategory}&rdquo; category.
           </p>
           <button
             type="button"
             onClick={() => setSelectedCategory('All')}
-            className="text-xs text-teal-600 hover:underline font-semibold"
+            className="text-xs text-[#2f6bff] hover:underline font-semibold cursor-pointer"
           >
             Reset Filters
           </button>

@@ -75,7 +75,7 @@ export function MobileCardScroll({
     <div className={cn('relative w-full', className)} {...props}>
       {/* Mobile Swipe Cue Animation */}
       {showSwipeHint && totalItems > 1 && !hasScrolled && (
-        <div className="flex md:hidden items-center justify-end gap-1 mb-2 text-[11px] font-semibold text-teal-600 animate-pulse transition-opacity duration-300 pr-1">
+        <div className="flex md:hidden items-center justify-end gap-1 mb-2 text-[11px] font-semibold text-[#2f6bff] animate-pulse transition-opacity duration-300 pr-1">
           <span>Swipe cards</span>
           <ChevronRight className="h-3.5 w-3.5 animate-pulse-swipe" />
         </div>
@@ -115,7 +115,7 @@ export function MobileCardScroll({
               className={cn(
                 'h-1.5 rounded-full transition-all duration-300 focus:outline-none',
                 activeIndex === idx
-                  ? 'w-6 bg-teal-600 shadow-sm shadow-teal-500/30'
+                  ? 'w-6 bg-[#2f6bff] shadow-sm shadow-[#2f6bff]/30'
                   : 'w-1.5 bg-slate-200 hover:bg-slate-300'
               )}
             />

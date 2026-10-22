@@ -12,7 +12,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <Card className="group flex flex-col overflow-hidden border-slate-200 bg-white hover:border-teal-500/50 hover:bg-slate-50/40 transition-all duration-300 hover:shadow-xl">
+    <Card className="group flex flex-col overflow-hidden rounded-3xl border border-slate-200/90 bg-white hover:border-[#2f6bff]/40 transition-all duration-300 hover:shadow-[0_12px_32px_rgba(47,107,255,0.12)]">
       {/* Cover Image */}
       <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100">
         <Image
@@ -22,9 +22,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#14233a]/60 via-transparent to-transparent" />
         <div className="absolute top-4 left-4">
-          <Badge className="bg-white/95 backdrop-blur-md border-teal-200 text-teal-800 font-semibold shadow-sm">
+          <Badge className="bg-white/95 backdrop-blur-md border-[#2f6bff]/20 text-[#2f6bff] font-bold shadow-xs">
             {project.category}
           </Badge>
         </div>
@@ -33,15 +33,15 @@ export function ProjectCard({ project }: ProjectCardProps) {
       {/* Content */}
       <div className="flex flex-1 flex-col p-6">
         <div className="flex items-start justify-between gap-4 mb-2">
-          <h3 className="text-xl font-bold text-slate-900 group-hover:text-teal-600 transition-colors line-clamp-1">
+          <h3 className="text-xl font-bold text-[#14233a] group-hover:text-[#2f6bff] transition-colors line-clamp-1">
             {project.title}
           </h3>
-          <div className="rounded-full p-2 bg-slate-100 text-slate-600 group-hover:bg-teal-600 group-hover:text-white transition-all shrink-0">
+          <div className="rounded-full p-2 bg-slate-100 text-slate-600 group-hover:bg-[#2f6bff] group-hover:text-white transition-all shrink-0">
             <ArrowUpRight className="h-4 w-4" />
           </div>
         </div>
 
-        <p className="text-sm text-slate-600 line-clamp-2 mb-6 flex-1 leading-relaxed">
+        <p className="text-sm text-[#64748b] line-clamp-2 mb-6 flex-1 leading-relaxed">
           {project.shortDescription}
         </p>
 
@@ -50,7 +50,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           {project.technologies.slice(0, 4).map((tech) => (
             <span
               key={tech}
-              className="rounded-lg bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700"
+              className="rounded-lg bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600 group-hover:bg-[#2f6bff]/8 group-hover:text-[#2f6bff] transition-colors"
             >
               {tech}
             </span>

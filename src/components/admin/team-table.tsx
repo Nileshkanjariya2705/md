@@ -120,7 +120,7 @@ export function TeamTable({ initialMembers }: TeamTableProps) {
                       {member.name}
                     </span>
                   </TableCell>
-                  <TableCell className="text-xs text-teal-600 font-semibold uppercase">
+                  <TableCell className="text-xs text-[#2f6bff] font-semibold uppercase">
                     {member.designation}
                   </TableCell>
                   <TableCell>

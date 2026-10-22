@@ -107,7 +107,7 @@ export function ReviewsTable({ initialReviews }: ReviewsTableProps) {
                         {rev.clientName}
                       </span>
                       <span className="text-xs text-slate-500">
-                        {rev.designation} • <span className="text-teal-600 font-semibold">{rev.companyName}</span>
+                        {rev.designation} • <span className="text-[#2f6bff] font-semibold">{rev.companyName}</span>
                       </span>
                     </div>
                   </TableCell>

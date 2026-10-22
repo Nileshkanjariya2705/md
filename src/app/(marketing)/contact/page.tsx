@@ -69,34 +69,34 @@ export default function ContactPage() {
 
           {/* Contact Info Sidebar Column */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 space-y-6 shadow-sm">
-              <h3 className="text-xl font-bold text-slate-900 flex items-center gap-2">
-                <Sparkles className="h-5 w-5 text-teal-600" />
+            <div className="rounded-3xl border border-slate-200/90 bg-white p-7 sm:p-8 space-y-6 shadow-sm">
+              <h3 className="text-xl font-bold text-[#14233a] flex items-center gap-2">
+                <Sparkles className="h-5 w-5 text-[#2f6bff]" />
                 Engineering Headquarters
               </h3>
 
               <div className="space-y-5 text-sm text-slate-600">
                 <div className="flex items-start gap-3.5">
-                  <div className="h-9 w-9 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center shrink-0">
+                  <div className="h-9 w-9 rounded-xl bg-[#2f6bff]/8 text-[#2f6bff] flex items-center justify-center shrink-0">
                     <MapPin className="h-4 w-4" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-slate-900">Location</h4>
-                    <p className="mt-0.5 text-slate-500 leading-relaxed">
+                    <h4 className="font-semibold text-[#14233a]">Location</h4>
+                    <p className="mt-0.5 text-[#64748b] leading-relaxed">
                       {SITE_CONFIG.address.street}, {SITE_CONFIG.address.city}, {SITE_CONFIG.address.state} {SITE_CONFIG.address.zip}
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3.5">
-                  <div className="h-9 w-9 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center shrink-0">
+                  <div className="h-9 w-9 rounded-xl bg-[#2f6bff]/8 text-[#2f6bff] flex items-center justify-center shrink-0">
                     <Mail className="h-4 w-4" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-slate-900">Email Inquiries</h4>
+                    <h4 className="font-semibold text-[#14233a]">Email Inquiries</h4>
                     <a
                       href={`mailto:${SITE_CONFIG.email}`}
-                      className="mt-0.5 block text-teal-600 font-medium hover:underline"
+                      className="mt-0.5 block text-[#2f6bff] font-semibold hover:underline"
                     >
                       {SITE_CONFIG.email}
                     </a>
@@ -104,24 +104,24 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-3.5">
-                  <div className="h-9 w-9 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center shrink-0">
+                  <div className="h-9 w-9 rounded-xl bg-[#2f6bff]/8 text-[#2f6bff] flex items-center justify-center shrink-0">
                     <Phone className="h-4 w-4" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-slate-900">Direct Line</h4>
-                    <p className="mt-0.5 text-slate-500">
+                    <h4 className="font-semibold text-[#14233a]">Direct Line</h4>
+                    <p className="mt-0.5 text-[#64748b]">
                       {SITE_CONFIG.phone}
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3.5">
-                  <div className="h-9 w-9 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center shrink-0">
+                  <div className="h-9 w-9 rounded-xl bg-[#2f6bff]/8 text-[#2f6bff] flex items-center justify-center shrink-0">
                     <Clock className="h-4 w-4" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-slate-900">Response SLA</h4>
-                    <p className="mt-0.5 text-slate-500">
+                    <h4 className="font-semibold text-[#14233a]">Response SLA</h4>
+                    <p className="mt-0.5 text-[#64748b]">
                       Standard inquiries reviewed within 24 hours. Critical escalations monitored 24/7.
                     </p>
                   </div>
@@ -130,10 +130,10 @@ export default function ContactPage() {
             </div>
 
             {/* NDA / Confidentiality Guarantee */}
-            <div className="rounded-2xl border border-teal-200 bg-teal-50/70 p-6 flex items-start gap-3.5">
-              <ShieldCheck className="h-6 w-6 text-teal-600 shrink-0 mt-0.5" />
+            <div className="rounded-3xl border border-[#2f6bff]/20 bg-[#2f6bff]/5 p-6 flex items-start gap-3.5">
+              <ShieldCheck className="h-6 w-6 text-[#2f6bff] shrink-0 mt-0.5" />
               <div className="text-xs text-slate-700 leading-relaxed">
-                <strong className="text-teal-800 block mb-1">Mutual NDA Protected:</strong>
+                <strong className="text-[#14233a] block mb-1">Mutual NDA Protected:</strong>
                 All proprietary concepts, architecture plans, and communication submitted through this portal are treated with strict confidentiality.
               </div>
             </div>

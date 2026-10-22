@@ -35,20 +35,20 @@ export function Navbar() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-3 sm:px-6 pt-2 sm:pt-2.5">
+    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-3 sm:px-6 pt-2.5 sm:pt-3">
       <nav
         aria-label="Main Navigation"
         className={cn(
-          'mx-auto max-w-7xl rounded-2xl transition-all duration-300 px-3 sm:px-5 h-[52px] sm:h-[60px] flex items-center justify-between',
+          'mx-auto max-w-7xl rounded-full transition-all duration-300 px-4 sm:px-6 h-[54px] sm:h-[62px] flex items-center justify-between',
           isScrolled
-            ? 'bg-white/90 backdrop-blur-xl border border-slate-200/90 shadow-md shadow-slate-200/50'
-            : 'bg-white/75 backdrop-blur-md border border-slate-200/70 shadow-sm'
+            ? 'bg-white/90 backdrop-blur-xl border border-slate-200/90 shadow-md shadow-slate-900/5'
+            : 'bg-white/80 backdrop-blur-md border border-slate-200/70 shadow-xs'
         )}
       >
-        {/* Brand Logo - takes ~90% of header height */}
+        {/* Brand Logo */}
         <Link
           href="/"
-          className="flex items-center h-full group focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600 rounded-lg shrink-0"
+          className="flex items-center h-full group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2f6bff] rounded-lg shrink-0"
           aria-label="Magnovaa Technology Home"
         >
           <Image
@@ -57,12 +57,12 @@ export function Navbar() {
             width={240}
             height={85}
             priority
-            className="h-[46px] sm:h-[54px] max-h-[92%] w-auto object-contain transition-transform group-hover:scale-105"
+            className="h-[44px] sm:h-[50px] max-h-[90%] w-auto object-contain transition-transform group-hover:scale-105"
           />
         </Link>
 
         {/* Desktop Navigation Links */}
-        <div className="hidden lg:flex items-center gap-1 xl:gap-1.5 bg-slate-100/90 border border-slate-200 rounded-full px-3 xl:px-4 py-1.5 backdrop-blur-md">
+        <div className="hidden lg:flex items-center gap-1 xl:gap-2">
           {NAV_LINKS.map((link) => {
             const isActive =
               mounted && pathname
@@ -77,10 +77,10 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  'px-2.5 xl:px-3.5 py-1.5 rounded-full text-xs xl:text-sm font-medium transition-all duration-200 whitespace-nowrap',
+                  'px-3.5 py-1.5 rounded-full text-xs xl:text-sm font-semibold transition-all duration-200 whitespace-nowrap',
                   isActive
-                    ? 'text-teal-700 bg-white shadow-sm font-semibold'
-                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/60'
+                    ? 'text-[#2f6bff] bg-[#2f6bff]/8'
+                    : 'text-slate-600 hover:text-[#14233a] hover:bg-slate-100/70'
                 )}
               >
                 {link.label}
@@ -104,7 +104,7 @@ export function Navbar() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="rounded-xl p-1.5 text-slate-700 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-teal-600"
+            className="rounded-full p-2 text-slate-700 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-[#2f6bff]"
             aria-expanded={mobileMenuOpen}
             aria-label="Toggle navigation menu"
           >
@@ -115,8 +115,8 @@ export function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden mt-2 mx-auto max-w-7xl rounded-2xl border border-slate-200 bg-white/95 backdrop-blur-2xl p-6 shadow-xl animate-reveal visible">
-          <div className="flex flex-col gap-2">
+        <div className="lg:hidden mt-2 mx-auto max-w-7xl rounded-3xl border border-slate-200 bg-white/95 backdrop-blur-2xl p-6 shadow-xl animate-reveal visible">
+          <div className="flex flex-col gap-1.5">
             {NAV_LINKS.map((link) => {
               const isActive =
                 mounted && pathname
@@ -132,9 +132,9 @@ export function Navbar() {
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className={cn(
-                    'px-4 py-3 rounded-xl text-base font-medium transition-all',
+                    'px-4 py-3 rounded-2xl text-base font-semibold transition-all',
                     isActive
-                      ? 'bg-teal-50 text-teal-700 font-semibold border border-teal-200'
+                      ? 'bg-[#2f6bff]/10 text-[#2f6bff] border border-[#2f6bff]/20'
                       : 'text-slate-700 hover:bg-slate-100 hover:text-slate-900'
                   )}
                 >
@@ -144,7 +144,7 @@ export function Navbar() {
             })}
 
             <div className="pt-4 mt-2 border-t border-slate-200">
-              <Button asChild className="w-full justify-center">
+              <Button asChild className="w-full justify-center rounded-full">
                 <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
                   Contact Us <ArrowUpRight className="h-4 w-4 ml-1" />
                 </Link>

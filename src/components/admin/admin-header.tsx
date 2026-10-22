@@ -27,8 +27,8 @@ export function AdminHeader({ title, description, action }: AdminHeaderProps) {
       <div className="flex items-center gap-4">
         {action}
         <div className="hidden sm:flex items-center gap-3 pl-4 border-l border-slate-200 text-xs text-slate-500">
-          <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-teal-50 text-teal-700 border border-teal-200 font-semibold">
-            <Sparkles className="h-3 w-3 text-teal-600" />
+          <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#2f6bff]/10 text-[#2f6bff] border border-[#2f6bff]/20 font-semibold">
+            <Sparkles className="h-3 w-3 text-[#2f6bff]" />
             <span>Active Admin</span>
           </div>
         </div>

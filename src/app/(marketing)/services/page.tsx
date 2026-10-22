@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Container } from '@/components/layout/container';
-import { SectionHeading } from '@/components/layout/section-heading';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { MobileCardScroll } from '@/components/ui/mobile-card-scroll';
@@ -21,7 +20,6 @@ import {
   Globe,
   Cpu,
   Sparkles,
-  Lock,
 } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -318,16 +316,16 @@ export default function ServicesPage() {
       <Container>
         {/* Page Hero */}
         <div className="max-w-4xl mx-auto text-center mb-20">
-          <div className="inline-flex items-center gap-2 rounded-full border border-teal-200 bg-teal-50 px-4 py-1.5 text-xs font-semibold text-teal-800 mb-6 uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 rounded-full border border-[#2f6bff]/20 bg-[#2f6bff]/6 px-4 py-1.5 text-xs font-semibold text-[#2f6bff] mb-6 uppercase tracking-wider shadow-xs">
             Our 9 Specialized Disciplines
           </div>
-          <h1 className="text-4xl sm:text-6xl font-black text-slate-900 tracking-tight leading-[1.1]">
+          <h1 className="text-4xl sm:text-6xl font-black text-[#14233a] tracking-tight leading-[1.1]">
             Engineering & Technology Services{' '}
-            <span className="bg-gradient-to-r from-teal-600 via-teal-700 to-cyan-700 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#2f6bff] via-[#3d7eff] to-[#19c3d8] bg-clip-text text-transparent">
               Engineered for Enterprise Impact
             </span>
           </h1>
-          <p className="mt-6 text-lg sm:text-xl text-slate-600 leading-relaxed font-normal">
+          <p className="mt-6 text-lg sm:text-xl text-[#64748b] leading-relaxed font-normal">
             From modern full-stack web architectures and cutting-edge artificial intelligence to enterprise .NET, Java, WordPress, and cloud DevOps, we deliver end-to-end software excellence that scales your business.
           </p>
         </div>
@@ -342,14 +340,14 @@ export default function ServicesPage() {
             return (
               <div
                 key={idx}
-                className="p-6 rounded-2xl border border-slate-200 bg-slate-50/70 hover:bg-white hover:border-teal-500/30 hover:shadow-md transition-all duration-300 h-full flex flex-col justify-between"
+                className="p-6 rounded-2xl border border-slate-200/90 bg-white hover:border-[#2f6bff]/30 hover:shadow-md transition-all duration-300 h-full flex flex-col justify-between"
               >
                 <div>
-                  <div className="h-10 w-10 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center mb-4">
+                  <div className="h-10 w-10 rounded-xl bg-[#2f6bff]/8 text-[#2f6bff] flex items-center justify-center mb-4">
                     <Icon className="h-5 w-5" />
                   </div>
-                  <h4 className="text-base font-bold text-slate-900 mb-2">{pillar.title}</h4>
-                  <p className="text-xs text-slate-600 leading-relaxed">{pillar.desc}</p>
+                  <h4 className="text-base font-bold text-[#14233a] mb-2">{pillar.title}</h4>
+                  <p className="text-xs text-[#64748b] leading-relaxed">{pillar.desc}</p>
                 </div>
               </div>
             );
@@ -359,10 +357,10 @@ export default function ServicesPage() {
         {/* Detailed Services Grid (All 9 Services in Sequence) */}
         <div className="space-y-12">
           <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
+            <h2 className="text-3xl font-extrabold text-[#14233a] tracking-tight">
               Our 9 Core Service Offerings
             </h2>
-            <p className="mt-3 text-slate-600 text-sm sm:text-base">
+            <p className="mt-3 text-[#64748b] text-sm sm:text-base">
               Each discipline is led by senior engineers and architects dedicated to delivering maximum business value and zero technical debt.
             </p>
           </div>
@@ -377,25 +375,25 @@ export default function ServicesPage() {
                 <Card
                   id={service.id}
                   key={service.number}
-                  className="p-8 sm:p-10 border-slate-200 bg-white hover:border-teal-500/40 hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden group rounded-3xl scroll-mt-28"
+                  className="p-8 sm:p-10 border-slate-200/90 bg-white hover:border-[#2f6bff]/40 hover:shadow-[0_12px_32px_rgba(47,107,255,0.12)] transition-all duration-300 flex flex-col justify-between relative overflow-hidden group rounded-3xl scroll-mt-28"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-6">
-                      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-teal-50 text-teal-600 group-hover:scale-105 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300 shadow-sm">
+                      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#2f6bff]/8 text-[#2f6bff] group-hover:scale-105 group-hover:bg-[#2f6bff] group-hover:text-white transition-all duration-300 shadow-xs">
                         <Icon className="h-7 w-7" />
                       </div>
-                      <span className="text-[11px] uppercase tracking-wider font-bold text-teal-700 bg-teal-50/80 border border-teal-200/70 px-3 py-1 rounded-full">
+                      <span className="text-[11px] uppercase tracking-wider font-bold text-[#2f6bff] bg-[#2f6bff]/8 border border-[#2f6bff]/20 px-3 py-1 rounded-full">
                         {service.badge}
                       </span>
                     </div>
 
-                    <h3 className="text-2xl font-bold text-slate-900 mb-1 group-hover:text-teal-600 transition-colors">
+                    <h3 className="text-2xl font-bold text-[#14233a] mb-1 group-hover:text-[#2f6bff] transition-colors">
                       {service.title}
                     </h3>
-                    <p className="text-xs font-semibold text-teal-700 mb-3">
+                    <p className="text-xs font-semibold text-[#2f6bff] mb-3">
                       {service.headline}
                     </p>
-                    <p className="text-sm text-slate-600 leading-relaxed mb-6">
+                    <p className="text-sm text-[#64748b] leading-relaxed mb-6">
                       {service.description}
                     </p>
 
@@ -406,7 +404,7 @@ export default function ServicesPage() {
                       </h5>
                       {service.deliverables.map((item, dIdx) => (
                         <div key={dIdx} className="flex items-start gap-2.5 text-xs text-slate-700">
-                          <Sparkles className="h-3.5 w-3.5 text-teal-600 shrink-0 mt-0.5" />
+                          <Sparkles className="h-3.5 w-3.5 text-[#2f6bff] shrink-0 mt-0.5" />
                           <span>{item}</span>
                         </div>
                       ))}
@@ -426,7 +424,7 @@ export default function ServicesPage() {
                       ))}
                     </div>
 
-                    <Button asChild size="sm" variant="outline" className="rounded-xl shrink-0 group-hover:bg-teal-600 group-hover:text-white group-hover:border-teal-600 transition-all">
+                    <Button asChild size="sm" variant="outline" className="rounded-full shrink-0 hover:bg-gradient-to-r hover:from-[#2f6bff] hover:to-[#4f8aff] hover:text-white hover:border-[#2f6bff] transition-all">
                       <Link href="/contact" className="gap-1.5">
                         <span>Get Quote</span>
                         <ArrowRight className="h-3.5 w-3.5" />

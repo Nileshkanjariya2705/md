@@ -6,10 +6,10 @@ export default function NotFound() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-slate-50 px-4 text-center">
       <div className="max-w-md space-y-6">
-        <div className="inline-flex h-20 w-20 items-center justify-center rounded-3xl bg-teal-50 border border-teal-200 text-teal-700 font-extrabold text-3xl shadow-sm">
+        <div className="inline-flex h-20 w-20 items-center justify-center rounded-3xl bg-[#2f6bff]/10 border border-[#2f6bff]/20 text-[#2f6bff] font-black text-3xl shadow-sm">
           404
         </div>
-        <h1 className="text-3xl font-extrabold text-slate-900">Page Not Found</h1>
+        <h1 className="text-3xl font-black text-[#14233a] tracking-tight">Page Not Found</h1>
         <p className="text-slate-600 text-sm">
           The requested page could not be located. It might have been moved, renamed, or is temporarily unavailable.
         </p>

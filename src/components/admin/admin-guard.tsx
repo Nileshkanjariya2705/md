@@ -35,7 +35,7 @@ export function AdminGuard({ children }: { children: React.ReactNode }) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-slate-50 text-slate-600">
         <div className="flex flex-col items-center gap-3">
-          <Loader2 className="h-8 w-8 animate-spin text-teal-600" />
+          <Loader2 className="h-8 w-8 animate-spin text-[#2f6bff]" />
           <p className="text-xs uppercase tracking-wider font-semibold">
             Verifying Admin Credentials...
           </p>

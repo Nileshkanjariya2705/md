@@ -157,7 +157,7 @@ export function ProjectForm({ initialData, isEdit = false }: ProjectFormProps) {
               <button
                 type="button"
                 onClick={handleAutoSlug}
-                className="text-[11px] text-teal-600 hover:underline flex items-center gap-1 font-medium"
+                className="text-[11px] text-[#2f6bff] hover:underline flex items-center gap-1 font-medium"
               >
                 <Wand2 className="h-3 w-3" /> Auto from title
               </button>
@@ -181,7 +181,7 @@ export function ProjectForm({ initialData, isEdit = false }: ProjectFormProps) {
             </label>
             <select
               {...register('category')}
-              className="flex h-10 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 shadow-sm focus:border-teal-600 focus:outline-none"
+              className="flex h-10 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 shadow-sm focus:border-[#2f6bff] focus:outline-none"
             >
               {PROJECT_CATEGORIES.map((cat) => (
                 <option key={cat} value={cat}>

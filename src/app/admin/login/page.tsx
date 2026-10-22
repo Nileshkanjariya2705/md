@@ -93,7 +93,7 @@ function AdminLoginForm() {
   if (isAuthorized === null) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-slate-50">
-        <Loader2 className="h-7 w-7 animate-spin text-teal-600" />
+        <Loader2 className="h-7 w-7 animate-spin text-[#2f6bff]" />
       </div>
     );
   }
@@ -101,7 +101,7 @@ function AdminLoginForm() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-slate-50 px-4 py-12 relative overflow-hidden">
       {/* Background glow */}
-      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-teal-500/10 blur-[140px] rounded-full" />
+      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-[#2f6bff]/10 blur-[140px] rounded-full" />
 
       <div className="relative z-10 w-full max-w-md">
         {/* Brand Header */}
@@ -117,12 +117,12 @@ function AdminLoginForm() {
             />
           </div>
           {operatorName && (
-            <div className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-teal-100/90 text-teal-800 border border-teal-300/80 px-3.5 py-1 text-xs font-bold shadow-xs">
-              <ShieldCheck className="h-4 w-4 text-teal-600" />
+            <div className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-[#2f6bff]/10 text-[#2f6bff] border border-[#2f6bff]/20 px-3.5 py-1 text-xs font-bold shadow-xs">
+              <ShieldCheck className="h-4 w-4 text-[#2f6bff]" />
               Gateway Unlocked: {operatorName}
             </div>
           )}
-          <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-[#14233a] tracking-tight">
             Administrator Gateway
           </h1>
           <p className="mt-2 text-sm text-slate-500">
@@ -141,7 +141,7 @@ function AdminLoginForm() {
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
             <div className="space-y-1.5">
               <label className="text-xs font-semibold text-slate-700 flex items-center gap-2">
-                <Mail className="h-3.5 w-3.5 text-teal-600" /> Email Address
+                <Mail className="h-3.5 w-3.5 text-[#2f6bff]" /> Email Address
               </label>
               <Input
                 type="email"
@@ -156,7 +156,7 @@ function AdminLoginForm() {
 
             <div className="space-y-1.5">
               <label className="text-xs font-semibold text-slate-700 flex items-center gap-2">
-                <Lock className="h-3.5 w-3.5 text-teal-600" /> Password
+                <Lock className="h-3.5 w-3.5 text-[#2f6bff]" /> Password
               </label>
               <Input
                 type="password"
@@ -193,7 +193,7 @@ function AdminLoginForm() {
             <button
               type="button"
               onClick={fillDemoCredentials}
-              className="text-xs text-teal-600 hover:text-teal-700 font-semibold underline underline-offset-4"
+              className="text-xs text-[#2f6bff] hover:text-[#1e4dc9] font-semibold underline underline-offset-4"
             >
               Click to autofill demo credentials
             </button>
@@ -222,7 +222,7 @@ export default function AdminLoginPage() {
     <Suspense
       fallback={
         <div className="min-h-screen flex items-center justify-center bg-slate-50">
-          <Loader2 className="h-7 w-7 animate-spin text-teal-600" />
+          <Loader2 className="h-7 w-7 animate-spin text-[#2f6bff]" />
         </div>
       }
     >

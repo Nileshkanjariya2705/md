@@ -175,7 +175,7 @@ export function ProjectsTable({ initialProjects }: ProjectsTableProps) {
                       <Link
                         href={`/projects/${project.slug}`}
                         target="_blank"
-                        className="p-2 rounded-lg text-slate-400 hover:text-teal-600 hover:bg-slate-100 transition-colors"
+                        className="p-2 rounded-lg text-slate-400 hover:text-[#2f6bff] hover:bg-slate-100 transition-colors"
                         title="View Public Case Study"
                       >
                         <ExternalLink className="h-4 w-4" />

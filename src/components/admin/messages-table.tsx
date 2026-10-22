@@ -117,7 +117,7 @@ export function MessagesTable({ initialMessages }: MessagesTableProps) {
                       <span className="font-bold text-slate-900 block">{msg.name}</span>
                       <a
                         href={`mailto:${msg.email}`}
-                        className="text-xs text-teal-600 hover:underline flex items-center gap-1 font-medium"
+                        className="text-xs text-[#2f6bff] hover:underline flex items-center gap-1 font-medium"
                       >
                         <Mail className="h-3 w-3" /> {msg.email}
                       </a>
@@ -162,7 +162,7 @@ export function MessagesTable({ initialMessages }: MessagesTableProps) {
                             handleStatusChange(msg.id, 'READ');
                           }
                         }}
-                        className="p-2 rounded-lg text-slate-400 hover:text-teal-600 hover:bg-slate-100 transition-colors"
+                        className="p-2 rounded-lg text-slate-400 hover:text-[#2f6bff] hover:bg-slate-100 transition-colors"
                         title="View Full Message"
                       >
                         <Eye className="h-4 w-4" />
@@ -216,7 +216,7 @@ export function MessagesTable({ initialMessages }: MessagesTableProps) {
                 href={`mailto:${activeMessage.email}?subject=Re: ${encodeURIComponent(
                   activeMessage.subject
                 )}`}
-                className="text-xs text-teal-600 font-bold hover:underline flex items-center gap-1"
+                className="text-xs text-[#2f6bff] font-bold hover:underline flex items-center gap-1"
               >
                 <Mail className="h-3.5 w-3.5" /> Direct Reply via Email
               </a>

@@ -60,7 +60,7 @@ export default function PrivacyPolicyPage() {
         <div className="mb-8">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-teal-600 transition-colors"
+            className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-[#2f6bff] transition-colors"
           >
             <ArrowLeft className="h-4 w-4" /> Back to Home
           </Link>
@@ -76,14 +76,14 @@ export default function PrivacyPolicyPage() {
 
         <div className="max-w-4xl mx-auto space-y-10 text-slate-600 leading-relaxed text-base">
           {/* Section 1 */}
-          <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm space-y-4">
-            <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2.5">
-              <ShieldCheck className="h-5 w-5 text-teal-600" />
+          <section className="rounded-3xl border border-slate-200/90 bg-white p-8 shadow-xs space-y-4">
+            <h2 className="text-xl font-bold text-[#14233a] flex items-center gap-2.5">
+              <ShieldCheck className="h-5 w-5 text-[#2f6bff]" />
               1. Information We Collect
             </h2>
             <p>
               Magnovaa Technology (&quot;Magnovaa&quot;, &quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) operates{' '}
-              <Link href="https://magnovaa.com" className="text-teal-600 font-semibold hover:underline">
+              <Link href="https://magnovaa.com" className="text-[#2f6bff] font-semibold hover:underline">
                 https://magnovaa.com
               </Link>{' '}
               to provide enterprise software engineering, AI architecture, cloud infrastructure, and technical consulting.
@@ -94,9 +94,9 @@ export default function PrivacyPolicyPage() {
           </section>
 
           {/* Section 2 */}
-          <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm space-y-4">
-            <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2.5">
-              <Lock className="h-5 w-5 text-teal-600" />
+          <section className="rounded-3xl border border-slate-200/90 bg-white p-8 shadow-xs space-y-4">
+            <h2 className="text-xl font-bold text-[#14233a] flex items-center gap-2.5">
+              <Lock className="h-5 w-5 text-[#2f6bff]" />
               2. Intellectual Property & Confidentiality
             </h2>
             <p>
@@ -108,9 +108,9 @@ export default function PrivacyPolicyPage() {
           </section>
 
           {/* Section 3 */}
-          <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm space-y-4">
-            <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2.5">
-              <Eye className="h-5 w-5 text-teal-600" />
+          <section className="rounded-3xl border border-slate-200/90 bg-white p-8 shadow-xs space-y-4">
+            <h2 className="text-xl font-bold text-[#14233a] flex items-center gap-2.5">
+              <Eye className="h-5 w-5 text-[#2f6bff]" />
               3. Telemetry & Analytics
             </h2>
             <p>
@@ -122,18 +122,18 @@ export default function PrivacyPolicyPage() {
           </section>
 
           {/* Section 4 */}
-          <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm space-y-4">
-            <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2.5">
-              <FileText className="h-5 w-5 text-teal-600" />
+          <section className="rounded-3xl border border-slate-200/90 bg-white p-8 shadow-xs space-y-4">
+            <h2 className="text-xl font-bold text-[#14233a] flex items-center gap-2.5">
+              <FileText className="h-5 w-5 text-[#2f6bff]" />
               4. Contact Our Data Governance Team
             </h2>
             <p>
               For security disclosures, data access requests, or NDA inquiries, please contact our legal and infrastructure leadership directly:
             </p>
             <div className="pt-2">
-              <p className="font-semibold text-slate-900">Magnovaa Technology Legal & Security</p>
-              <p>Email: <a href="mailto:hello@magnovaa.com" className="text-teal-600 hover:underline">hello@magnovaa.com</a></p>
-              <p>Website: <Link href="https://magnovaa.com" className="text-teal-600 hover:underline">https://magnovaa.com</Link></p>
+              <p className="font-semibold text-[#14233a]">Magnovaa Technology Legal & Security</p>
+              <p>Email: <a href="mailto:hello@magnovaa.com" className="text-[#2f6bff] font-semibold hover:underline">hello@magnovaa.com</a></p>
+              <p>Website: <Link href="https://magnovaa.com" className="text-[#2f6bff] font-semibold hover:underline">https://magnovaa.com</Link></p>
             </div>
           </section>
         </div>

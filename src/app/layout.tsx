@@ -145,7 +145,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen bg-[var(--md-bg-primary)] text-[var(--md-text-primary)] antialiased selection:bg-teal-500/20 selection:text-teal-900">
+      <body className="min-h-screen bg-[var(--md-bg-primary)] text-[var(--md-text-primary)] antialiased selection:bg-[#2f6bff]/20 selection:text-[#14233a]">
         <QueryProvider>
           <AuthProvider>
             {children}

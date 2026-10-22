@@ -176,7 +176,7 @@ export function ServicesSection() {
   return (
     <section id="services" className="py-24 bg-slate-50/70 relative scroll-mt-20 overflow-hidden">
       {/* Background ambient lighting */}
-      <div className="pointer-events-none absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-teal-500/5 blur-[140px] rounded-full" />
+      <div className="pointer-events-none absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#2f6bff]/5 blur-[140px] rounded-full" />
 
       <Container>
         <SectionHeading
@@ -192,31 +192,31 @@ export function ServicesSection() {
             return (
               <Card
                 key={service.id}
-                className="group p-7 sm:p-8 border-slate-200/90 bg-white hover:border-teal-500/50 hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden rounded-3xl h-full"
+                className="group p-7 sm:p-8 border-slate-200/90 bg-white hover:border-[#2f6bff]/40 hover:shadow-[0_12px_32px_rgba(47,107,255,0.12)] transition-all duration-300 flex flex-col justify-between relative overflow-hidden rounded-3xl h-full"
               >
                 <div>
                   {/* Top Bar with Icon and Badge */}
                   <div className="flex items-center justify-between mb-5">
-                    <div className="inline-flex h-13 w-13 items-center justify-center rounded-2xl bg-teal-50 text-teal-600 group-hover:scale-105 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300 shadow-sm">
+                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#2f6bff]/8 text-[#2f6bff] group-hover:scale-105 group-hover:bg-[#2f6bff] group-hover:text-white transition-all duration-300 shadow-xs">
                       <Icon className="h-6 w-6" />
                     </div>
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-teal-800 bg-teal-50 px-2.5 py-1 rounded-full border border-teal-200/70">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-[#2f6bff] bg-[#2f6bff]/8 px-2.5 py-1 rounded-full border border-[#2f6bff]/20">
                       {service.badge}
                     </span>
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-extrabold text-slate-900 group-hover:text-teal-600 transition-colors mb-2 tracking-tight">
+                  <h3 className="text-xl font-extrabold text-[#14233a] group-hover:text-[#2f6bff] transition-colors mb-2 tracking-tight">
                     {service.title}
                   </h3>
 
                   {/* Headline */}
-                  <p className="text-xs font-semibold text-teal-700 mb-3 leading-snug">
+                  <p className="text-xs font-semibold text-[#2f6bff] mb-3 leading-snug">
                     {service.headline}
                   </p>
 
                   {/* Detailed Description */}
-                  <p className="text-sm text-slate-600 leading-relaxed mb-6 font-normal">
+                  <p className="text-sm text-[#64748b] leading-relaxed mb-6 font-normal">
                     {service.desc}
                   </p>
 
@@ -227,7 +227,7 @@ export function ServicesSection() {
                     </div>
                     {service.highlights.map((highlight, hIdx) => (
                       <div key={hIdx} className="flex items-start gap-2 text-xs text-slate-700 leading-snug">
-                        <CheckCircle2 className="h-4 w-4 text-teal-600 shrink-0 mt-0.5" />
+                        <CheckCircle2 className="h-4 w-4 text-[#2f6bff] shrink-0 mt-0.5" />
                         <span>{highlight}</span>
                       </div>
                     ))}
@@ -240,7 +240,7 @@ export function ServicesSection() {
                     {service.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="rounded-md bg-slate-100 px-2 py-0.5 text-[11px] font-medium text-slate-600 group-hover:bg-teal-50 group-hover:text-teal-700 transition-colors"
+                        className="rounded-lg bg-slate-100 px-2.5 py-1 text-[11px] font-medium text-slate-600 group-hover:bg-[#2f6bff]/8 group-hover:text-[#2f6bff] transition-colors"
                       >
                         {tag}
                       </span>
@@ -249,7 +249,7 @@ export function ServicesSection() {
 
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-teal-600 hover:text-teal-800 transition-colors group-hover:translate-x-1 transition-transform"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#2f6bff] hover:text-[#2052d9] transition-colors group-hover:translate-x-1 transition-transform"
                   >
                     <span>Request a Quote for {service.title.split(' ')[0]}</span>
                     <ArrowRight className="h-3.5 w-3.5" />
@@ -262,7 +262,7 @@ export function ServicesSection() {
 
         {/* Explore More Services Button */}
         <div className="mt-12 text-center">
-          <Button asChild size="lg" className="rounded-xl px-8 shadow-sm">
+          <Button asChild size="lg" className="rounded-full px-8 shadow-sm">
             <Link href="/services" className="gap-2">
               Explore More Services <ArrowRight className="h-4 w-4" />
             </Link>
@@ -272,17 +272,17 @@ export function ServicesSection() {
         {/* Bottom CTA Card */}
         <div className="mt-16 text-center bg-white border border-slate-200/90 rounded-3xl p-8 sm:p-10 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-6 max-w-4xl mx-auto">
           <div className="text-left">
-            <div className="inline-flex items-center gap-1.5 text-xs font-bold text-teal-700 uppercase tracking-wider mb-2">
-              <Sparkles className="h-4 w-4 text-teal-600" /> Need a Custom Technology Stack?
+            <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#2f6bff] uppercase tracking-wider mb-2">
+              <Sparkles className="h-4 w-4 text-[#2f6bff]" /> Need a Custom Technology Stack?
             </div>
-            <h4 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
+            <h4 className="text-xl sm:text-2xl font-black text-[#14233a] tracking-tight">
               Ready to architect your custom digital solution?
             </h4>
-            <p className="text-sm text-slate-600 mt-1">
+            <p className="text-sm text-[#64748b] mt-1">
               Talk directly with our senior software architects for a free scoping session and quote.
             </p>
           </div>
-          <Button asChild size="lg" className="rounded-xl px-8 shadow-sm shrink-0">
+          <Button asChild size="lg" className="rounded-full px-8 shadow-sm shrink-0">
             <Link href="/contact" className="gap-2">
               Get in touch <ArrowRight className="h-4 w-4" />
             </Link>

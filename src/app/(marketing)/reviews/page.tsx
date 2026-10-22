@@ -105,19 +105,19 @@ export default async function ReviewsPage() {
             return (
               <Card
                 key={idx}
-                className="p-6 bg-white border-slate-200 shadow-sm hover:border-teal-500/40 hover:shadow-lg transition-all duration-300 h-full flex flex-col justify-between"
+                className="p-6 bg-white border-slate-200/90 shadow-xs hover:border-[#2f6bff]/40 hover:shadow-md transition-all duration-300 h-full flex flex-col justify-between rounded-2xl"
               >
                 <div>
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="h-10 w-10 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center shrink-0">
+                    <div className="h-10 w-10 rounded-xl bg-[#2f6bff]/8 text-[#2f6bff] flex items-center justify-center shrink-0">
                       <Icon className="h-5 w-5" />
                     </div>
-                    <span className="text-2xl font-extrabold text-slate-900 tracking-tight">
+                    <span className="text-2xl font-extrabold text-[#14233a] tracking-tight">
                       <AnimatedCounter value={stat.value} duration={1800} />
                     </span>
                   </div>
-                  <h4 className="text-sm font-bold text-slate-800 mb-1">{stat.label}</h4>
-                  <p className="text-xs text-slate-500">{stat.sub}</p>
+                  <h4 className="text-sm font-bold text-[#14233a] mb-1">{stat.label}</h4>
+                  <p className="text-xs text-[#64748b]">{stat.sub}</p>
                 </div>
               </Card>
             );
@@ -128,27 +128,27 @@ export default async function ReviewsPage() {
         <ReviewsGrid initialReviews={reviews} />
 
         {/* Enterprise Trust Box */}
-        <div className="mt-20 rounded-3xl border border-teal-200/80 bg-gradient-to-br from-teal-50/50 via-white to-slate-50 p-8 sm:p-12 shadow-sm">
+        <div className="mt-20 rounded-3xl border border-[#2f6bff]/20 bg-gradient-to-br from-[#2f6bff]/5 via-white to-slate-50 p-8 sm:p-12 shadow-sm">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 rounded-full bg-teal-100/80 px-3 py-1 text-xs font-bold text-teal-800 mb-4">
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#2f6bff]/10 px-3 py-1 text-xs font-bold text-[#2f6bff] mb-4">
               <Sparkles className="h-3.5 w-3.5" />
               Our Partnership Pledge
             </div>
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-4">
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-[#14233a] mb-4">
               Direct Senior Ownership. Never Subcontracted.
             </h3>
-            <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-6">
+            <p className="text-sm sm:text-base text-[#64748b] leading-relaxed mb-6">
               When you engage Magnovaa Technology, your product is personally architected and implemented by principal engineers. We maintain transparent sprint burndowns, shared Slack channels, and automated code review pipelines.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-teal-200/60 text-xs font-bold text-slate-700">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-slate-200 text-xs font-bold text-[#14233a]">
               <div className="flex items-center gap-2">
-                <ShieldCheck className="h-4 w-4 text-teal-600" /> Full IP & Code Ownership
+                <ShieldCheck className="h-4 w-4 text-[#2f6bff]" /> Full IP & Code Ownership
               </div>
               <div className="flex items-center gap-2">
-                <Building2 className="h-4 w-4 text-teal-600" /> Enterprise NDAs & SOC2
+                <Building2 className="h-4 w-4 text-[#2f6bff]" /> Enterprise NDAs & SOC2
               </div>
               <div className="flex items-center gap-2">
-                <Star className="h-4 w-4 text-teal-600" /> 100% Satisfaction Guarantee
+                <Star className="h-4 w-4 text-[#2f6bff]" /> 100% Satisfaction Guarantee
               </div>
             </div>
           </div>

@@ -82,44 +82,44 @@ export default async function AboutPage() {
       />
       {/* Hero */}
       <section className="relative overflow-hidden pb-20">
-        <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-teal-500/10 blur-[140px] rounded-full" />
+        <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#2f6bff]/5 blur-[140px] rounded-full" />
 
         <Container className="relative z-10 text-center max-w-4xl">
-          <div className="inline-flex items-center gap-2 rounded-full border border-teal-200 bg-teal-50 px-4 py-1.5 text-xs font-semibold text-teal-800 mb-6 uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 rounded-full border border-[#2f6bff]/20 bg-[#2f6bff]/6 px-4 py-1.5 text-xs font-semibold text-[#2f6bff] mb-6 uppercase tracking-wider shadow-xs">
             About Magnovaa Technology
           </div>
-          <h1 className="text-4xl sm:text-6xl font-black text-slate-900 tracking-tight leading-[1.1]">
+          <h1 className="text-4xl sm:text-6xl font-black text-[#14233a] tracking-tight leading-[1.1]">
             Engineering What&apos;s Next with{' '}
-            <span className="bg-gradient-to-r from-teal-600 via-teal-700 to-cyan-700 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#2f6bff] via-[#3d7eff] to-[#19c3d8] bg-clip-text text-transparent">
               Precision & Purpose
             </span>
           </h1>
-          <p className="mt-6 text-lg sm:text-xl text-slate-600 leading-relaxed font-normal">
+          <p className="mt-6 text-lg sm:text-xl text-[#64748b] leading-relaxed font-normal">
             Founded by veteran software architects, Magnovaa Technology was established to bridge the divide between corporate development agencies and high-velocity boutique product studios. We craft software that empowers visionary companies.
           </p>
         </Container>
       </section>
 
       {/* Mission & Vision Cards */}
-      <section className="py-16 bg-slate-50 border-y border-slate-200">
+      <section className="py-16 bg-slate-50/80 border-y border-slate-200">
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="p-8 sm:p-10 rounded-3xl border border-slate-200 bg-white shadow-sm relative overflow-hidden">
-              <div className="h-12 w-12 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center mb-6">
+            <div className="p-8 sm:p-10 rounded-3xl border border-slate-200/90 bg-white shadow-sm hover:border-[#2f6bff]/30 hover:shadow-[0_12px_32px_rgba(47,107,255,0.08)] transition-all relative overflow-hidden">
+              <div className="h-12 w-12 rounded-2xl bg-[#2f6bff]/8 text-[#2f6bff] flex items-center justify-center mb-6">
                 <Target className="h-6 w-6" />
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">Our Mission</h3>
-              <p className="text-slate-600 text-base leading-relaxed">
+              <h3 className="text-2xl font-bold text-[#14233a] mb-3">Our Mission</h3>
+              <p className="text-[#64748b] text-base leading-relaxed">
                 To engineer resilient, high-impact digital platforms that eliminate operational friction, unlock exponential business growth, and set benchmarks for software quality.
               </p>
             </div>
 
-            <div className="p-8 sm:p-10 rounded-3xl border border-slate-200 bg-white shadow-sm relative overflow-hidden">
-              <div className="h-12 w-12 rounded-2xl bg-cyan-50 text-cyan-600 flex items-center justify-center mb-6">
+            <div className="p-8 sm:p-10 rounded-3xl border border-slate-200/90 bg-white shadow-sm hover:border-[#19c3d8]/40 hover:shadow-[0_12px_32px_rgba(25,195,216,0.08)] transition-all relative overflow-hidden">
+              <div className="h-12 w-12 rounded-2xl bg-[#19c3d8]/10 text-[#0c7c8a] flex items-center justify-center mb-6">
                 <Compass className="h-6 w-6" />
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">Our Vision</h3>
-              <p className="text-slate-600 text-base leading-relaxed">
+              <h3 className="text-2xl font-bold text-[#14233a] mb-3">Our Vision</h3>
+              <p className="text-[#64748b] text-base leading-relaxed">
                 To become the world&apos;s most trusted engineering partner for enterprise leaders and high-growth pioneers who demand flawless digital execution.
               </p>
             </div>
@@ -138,9 +138,9 @@ export default async function AboutPage() {
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#14233a]/80 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 right-6">
-                <p className="text-sm font-semibold text-teal-300">
+                <p className="text-sm font-semibold text-[#19c3d8]">
                   Global Distributed Engineering Hub
                 </p>
                 <p className="text-xs text-slate-300">
@@ -157,10 +157,10 @@ export default async function AboutPage() {
                 description="We treat every system we construct as an engine for enterprise leverage."
                 className="mb-4"
               />
-              <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
+              <p className="text-[#64748b] leading-relaxed text-sm sm:text-base">
                 Software fails when agencies optimize for billable hours rather than long-term architecture. We invert this model: our squad members are incentivized by product speed, reliability, and business impact.
               </p>
-              <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
+              <p className="text-[#64748b] leading-relaxed text-sm sm:text-base">
                 Whether deploying zero-latency trading APIs, autonomous AI agents, or cross-platform applications, our teams bring unmatched discipline and design aesthetics to every milestone.
               </p>
             </div>
@@ -169,7 +169,7 @@ export default async function AboutPage() {
       </section>
 
       {/* Core Values */}
-      <section className="py-20 bg-slate-50 border-t border-slate-200">
+      <section className="py-20 bg-slate-50/70 border-t border-slate-200">
         <Container>
           <SectionHeading
             badge="Guiding Principles"
@@ -183,13 +183,13 @@ export default async function AboutPage() {
               return (
                 <div
                   key={idx}
-                  className="p-6 rounded-2xl border border-slate-200 bg-white hover:border-teal-500/30 shadow-sm transition-all"
+                  className="p-6 rounded-2xl border border-slate-200/90 bg-white hover:border-[#2f6bff]/40 hover:shadow-md transition-all"
                 >
-                  <div className="h-10 w-10 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center mb-4">
+                  <div className="h-10 w-10 rounded-xl bg-[#2f6bff]/8 text-[#2f6bff] flex items-center justify-center mb-4">
                     <Icon className="h-5 w-5" />
                   </div>
-                  <h4 className="text-lg font-bold text-slate-900 mb-2">{val.title}</h4>
-                  <p className="text-sm text-slate-600 leading-relaxed">{val.desc}</p>
+                  <h4 className="text-lg font-bold text-[#14233a] mb-2">{val.title}</h4>
+                  <p className="text-sm text-[#64748b] leading-relaxed">{val.desc}</p>
                 </div>
               );
             })}

@@ -6,7 +6,7 @@ import { usePublishedReviewsQuery } from '@/features/reviews/hooks/use-reviews-q
 import { ReviewCard } from './review-card';
 import { MobileCardScroll } from '@/components/ui/mobile-card-scroll';
 import { cn } from '@/lib/utils/cn';
-import { Star, Search, MessageSquareQuote } from 'lucide-react';
+import { Search, MessageSquareQuote } from 'lucide-react';
 
 interface ReviewsGridProps {
   initialReviews: ClientReview[];
@@ -38,7 +38,7 @@ export function ReviewsGrid({ initialReviews }: ReviewsGridProps) {
 
       return matchesCategory && matchesSearch;
     });
-  }, [initialReviews, selectedRating, searchQuery]);
+  }, [reviews, selectedRating, searchQuery]);
 
   return (
     <div className="space-y-10">
@@ -55,9 +55,9 @@ export function ReviewsGrid({ initialReviews }: ReviewsGridProps) {
                 type="button"
                 onClick={() => setSelectedRating(opt === 'All Reviews' ? 'All' : opt)}
                 className={cn(
-                  'rounded-full px-4 py-2 text-xs sm:text-sm font-semibold transition-all duration-200 border',
+                  'rounded-full px-4 py-2 text-xs sm:text-sm font-semibold transition-all duration-200 border cursor-pointer',
                   isSelected
-                    ? 'bg-teal-600 text-white border-teal-600 shadow-sm'
+                    ? 'bg-gradient-to-r from-[#2f6bff] to-[#4f8aff] text-white border-[#2f6bff] shadow-[0_4px_14px_rgba(47,107,255,0.25)] -translate-y-0.5'
                     : 'bg-white text-slate-700 border-slate-200 hover:border-slate-300 hover:bg-slate-50'
                 )}
               >
@@ -75,7 +75,7 @@ export function ReviewsGrid({ initialReviews }: ReviewsGridProps) {
             placeholder="Search by client, company, quote..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 text-xs sm:text-sm bg-white border border-slate-200 rounded-full focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent text-slate-800 placeholder:text-slate-400"
+            className="w-full pl-10 pr-4 py-2 text-xs sm:text-sm bg-white border border-slate-200 rounded-full focus:outline-none focus:ring-2 focus:ring-[#2f6bff] focus:border-transparent text-slate-800 placeholder:text-slate-400"
           />
         </div>
       </div>
@@ -89,7 +89,7 @@ export function ReviewsGrid({ initialReviews }: ReviewsGridProps) {
           <button
             type="button"
             onClick={() => setSearchQuery('')}
-            className="text-teal-600 hover:underline font-medium"
+            className="text-[#2f6bff] hover:underline font-medium cursor-pointer"
           >
             Clear search
           </button>
@@ -106,8 +106,8 @@ export function ReviewsGrid({ initialReviews }: ReviewsGridProps) {
       ) : (
         <div className="rounded-3xl border border-slate-200 bg-white p-16 text-center max-w-md mx-auto shadow-sm">
           <MessageSquareQuote className="h-12 w-12 text-slate-400 mx-auto mb-4" />
-          <h3 className="text-lg font-bold text-slate-900 mb-1">No Endorsements Found</h3>
-          <p className="text-sm text-slate-500 mb-6">
+          <h3 className="text-lg font-bold text-[#14233a] mb-1">No Endorsements Found</h3>
+          <p className="text-sm text-[#64748b] mb-6">
             We couldn&apos;t find any client reviews matching your search query.
           </p>
           <button
@@ -116,7 +116,7 @@ export function ReviewsGrid({ initialReviews }: ReviewsGridProps) {
               setSelectedRating('All');
               setSearchQuery('');
             }}
-            className="rounded-xl bg-teal-600 px-5 py-2.5 text-xs font-semibold text-white hover:bg-teal-700 transition-colors"
+            className="rounded-full bg-gradient-to-r from-[#2f6bff] to-[#4f8aff] px-6 py-2.5 text-xs font-semibold text-white shadow-sm hover:shadow-[0_4px_14px_rgba(47,107,255,0.25)] transition-all cursor-pointer"
           >
             Reset Filters
           </button>

@@ -16,7 +16,7 @@ export function ReviewsSection({ reviews }: ReviewsSectionProps) {
   return (
     <section id="reviews" className="py-24 relative overflow-hidden scroll-mt-20">
       {/* Subtle background glow */}
-      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-teal-500/5 blur-[120px] rounded-full" />
+      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#2f6bff]/5 blur-[120px] rounded-full" />
 
       <Container className="relative z-10">
         <SectionHeading
@@ -33,7 +33,7 @@ export function ReviewsSection({ reviews }: ReviewsSectionProps) {
 
         {/* Explore More Reviews Button */}
         <div className="mt-12 text-center">
-          <Button asChild size="lg" className="rounded-xl px-8 shadow-sm">
+          <Button asChild size="lg" className="rounded-full px-8 shadow-sm">
             <Link href="/reviews" className="gap-2">
               Explore More Client Reviews <ArrowRight className="h-4 w-4" />
             </Link>

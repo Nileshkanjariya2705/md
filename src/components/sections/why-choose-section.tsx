@@ -53,13 +53,17 @@ export function WhyChooseSection() {
             return (
               <Card
                 key={idx}
-                className="p-8 border-slate-200 bg-slate-50 hover:border-teal-500/40 hover:bg-white hover:shadow-md transition-all duration-300"
+                className="group p-8 rounded-2xl border border-slate-200/90 bg-white hover:border-[#2f6bff]/40 hover:shadow-[0_12px_32px_rgba(47,107,255,0.08)] transition-all duration-300"
               >
-                <div className="h-10 w-10 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center mb-5">
+                <div className="h-11 w-11 rounded-xl bg-[#2f6bff]/8 text-[#2f6bff] flex items-center justify-center mb-5 group-hover:scale-105 group-hover:bg-[#2f6bff] group-hover:text-white transition-all duration-300">
                   <Icon className="h-5 w-5" />
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 mb-2">{adv.title}</h3>
-                <p className="text-sm text-slate-600 leading-relaxed">{adv.desc}</p>
+                <h3 className="text-lg font-bold text-[#14233a] group-hover:text-[#2f6bff] transition-colors mb-2">
+                  {adv.title}
+                </h3>
+                <p className="text-sm text-[#64748b] leading-relaxed">
+                  {adv.desc}
+                </p>
               </Card>
             );
           })}

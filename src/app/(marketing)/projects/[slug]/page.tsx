@@ -126,7 +126,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailProps) 
         <div className="mb-8">
           <Link
             href="/projects"
-            className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-teal-300 transition-colors"
+            className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-[#2f6bff] transition-colors"
           >
             <ArrowLeft className="h-4 w-4" /> Back to all projects
           </Link>
@@ -135,27 +135,27 @@ export default async function ProjectDetailPage({ params }: ProjectDetailProps) 
         {/* Header */}
         <div className="max-w-4xl space-y-4 mb-10">
           <div className="flex flex-wrap items-center gap-3">
-            <Badge className="bg-teal-50 text-teal-700 border-teal-200">
+            <Badge className="bg-[#2f6bff]/8 text-[#2f6bff] border-[#2f6bff]/20 font-bold">
               {project.category}
             </Badge>
             <span className="text-xs text-slate-500 flex items-center gap-1.5">
-              <Calendar className="h-3.5 w-3.5" />
+              <Calendar className="h-3.5 w-3.5 text-slate-400" />
               {formatDate(project.createdAt)}
             </span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.1]">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-[#14233a] tracking-tight leading-[1.1]">
             {project.title}
           </h1>
 
-          <p className="text-lg sm:text-xl text-slate-600 leading-relaxed">
+          <p className="text-lg sm:text-xl text-[#64748b] leading-relaxed">
             {project.shortDescription}
           </p>
 
           {/* Action Links */}
           <div className="flex flex-wrap items-center gap-3 pt-2">
             {project.projectUrl && (
-              <Button asChild size="sm" className="rounded-xl">
+              <Button asChild size="sm" className="rounded-full shadow-sm">
                 <a
                   href={project.projectUrl}
                   target="_blank"
@@ -169,7 +169,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailProps) 
             )}
 
             {project.githubUrl && (
-              <Button asChild variant="outline" size="sm" className="rounded-xl">
+              <Button asChild variant="outline" size="sm" className="rounded-full">
                 <a
                   href={project.githubUrl}
                   target="_blank"
@@ -200,31 +200,31 @@ export default async function ProjectDetailPage({ params }: ProjectDetailProps) 
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-10">
             <div>
-              <h2 className="text-2xl font-bold text-slate-900 mb-4">
+              <h2 className="text-2xl font-bold text-[#14233a] mb-4">
                 Architecture & Implementation Overview
               </h2>
-              <div className="prose max-w-none text-slate-600 leading-relaxed space-y-4 text-base">
+              <div className="prose max-w-none text-[#64748b] leading-relaxed space-y-4 text-base">
                 <p>{project.description}</p>
               </div>
             </div>
 
             {/* Architecture Highlights */}
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 space-y-4 shadow-sm">
-              <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
-                <CheckCircle2 className="h-5 w-5 text-teal-600" />
+            <div className="rounded-3xl border border-slate-200/90 bg-white p-6 sm:p-8 space-y-4 shadow-xs">
+              <h3 className="text-lg font-bold text-[#14233a] flex items-center gap-2">
+                <CheckCircle2 className="h-5 w-5 text-[#2f6bff]" />
                 Key Engineering Highlights
               </h3>
-              <ul className="space-y-3 text-sm text-slate-600">
-                <li className="flex items-start gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+              <ul className="space-y-3 text-sm text-[#64748b]">
+                <li className="flex items-start gap-2.5">
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#2f6bff] mt-2 shrink-0" />
                   <span>Engineered with strict zero-trust data segregation protocols.</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                <li className="flex items-start gap-2.5">
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#2f6bff] mt-2 shrink-0" />
                   <span>Optimized for low-latency edge deployment and horizontal scaling.</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                <li className="flex items-start gap-2.5">
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#2f6bff] mt-2 shrink-0" />
                   <span>Comprehensive automated CI/CD pipeline with synthetic test coverage.</span>
                 </li>
               </ul>
@@ -233,7 +233,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailProps) 
             {/* Gallery Images if available */}
             {project.gallery && project.gallery.length > 0 && (
               <div className="space-y-4 pt-6">
-                <h3 className="text-xl font-bold text-slate-900">Project Visuals</h3>
+                <h3 className="text-xl font-bold text-[#14233a]">Project Visuals</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {project.gallery.map((img, idx) => (
                     <div
@@ -256,16 +256,16 @@ export default async function ProjectDetailPage({ params }: ProjectDetailProps) 
 
           {/* Sidebar Specs */}
           <aside className="space-y-6">
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 space-y-6 shadow-sm">
+            <div className="rounded-3xl border border-slate-200/90 bg-white p-6 space-y-6 shadow-xs">
               <div>
                 <h4 className="text-xs uppercase font-bold tracking-wider text-slate-500 mb-3 flex items-center gap-2">
-                  <Folder className="h-4 w-4 text-teal-600" /> Technology Stack
+                  <Folder className="h-4 w-4 text-[#2f6bff]" /> Technology Stack
                 </h4>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="rounded-lg bg-slate-100 px-3 py-1.5 text-xs font-semibold text-teal-700 border border-slate-200"
+                      className="rounded-lg bg-[#2f6bff]/6 px-3 py-1.5 text-xs font-semibold text-[#2f6bff] border border-[#2f6bff]/15"
                     >
                       {tech}
                     </span>
@@ -277,7 +277,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailProps) 
                 <h4 className="text-xs uppercase font-bold tracking-wider text-slate-500 mb-1">
                   Category
                 </h4>
-                <p className="text-sm font-semibold text-slate-900">
+                <p className="text-sm font-semibold text-[#14233a]">
                   {project.category}
                 </p>
               </div>
@@ -286,7 +286,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailProps) 
                 <h4 className="text-xs uppercase font-bold tracking-wider text-slate-500 mb-1">
                   Client Engagement
                 </h4>
-                <p className="text-sm font-semibold text-slate-900">
+                <p className="text-sm font-semibold text-[#14233a]">
                   Enterprise Dedicated Squad
                 </p>
               </div>

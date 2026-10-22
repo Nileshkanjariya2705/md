@@ -112,7 +112,7 @@ export default async function AdminDashboardPage() {
                     <span>{stat.detail}</span>
                     <Link
                       href={stat.href}
-                      className="text-teal-600 hover:underline font-semibold"
+                      className="text-[#2f6bff] hover:underline font-semibold"
                     >
                       Manage →
                     </Link>
@@ -126,7 +126,7 @@ export default async function AdminDashboardPage() {
         {/* Quick Actions Bar */}
         <div className="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm flex flex-wrap items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <Sparkles className="h-5 w-5 text-teal-600" />
+            <Sparkles className="h-5 w-5 text-[#2f6bff]" />
             <div>
               <h3 className="text-sm font-bold text-slate-900">Direct Content Publishing</h3>
               <p className="text-xs text-slate-500">Instantly append records to the live public site.</p>
@@ -157,12 +157,12 @@ export default async function AdminDashboardPage() {
           <Card className="p-6 border-slate-200 bg-white shadow-sm">
             <div className="flex items-center justify-between mb-6 pb-4 border-b border-slate-100">
               <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
-                <FolderKanban className="h-5 w-5 text-teal-600" />
+                <FolderKanban className="h-5 w-5 text-[#2f6bff]" />
                 Recent Projects
               </h3>
               <Link
                 href="/admin/projects"
-                className="text-xs font-semibold text-teal-600 hover:underline"
+                className="text-xs font-semibold text-[#2f6bff] hover:underline"
               >
                 View all ({projects.length})
               </Link>
@@ -209,7 +209,7 @@ export default async function AdminDashboardPage() {
               </h3>
               <Link
                 href="/admin/messages"
-                className="text-xs font-semibold text-teal-600 hover:underline"
+                className="text-xs font-semibold text-[#2f6bff] hover:underline"
               >
                 View all ({messages.length})
               </Link>
