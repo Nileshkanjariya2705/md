@@ -4,14 +4,10 @@ import type { NextRequest } from 'next/server';
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Secret admin access entry points
+  // Secret admin access entry points: render login on /mitali or /dharmesh directly
   if (pathname === '/mitali' || pathname === '/dharmesh') {
     const operator = pathname.replace('/', '');
-    const url = request.nextUrl.clone();
-    url.pathname = '/admin/login';
-    url.searchParams.set('operator', operator);
-
-    const response = NextResponse.redirect(url);
+    const response = NextResponse.next();
     response.cookies.set('md_admin_access', 'granted', {
       path: '/',
       httpOnly: false,
@@ -27,8 +23,15 @@ export function middleware(request: NextRequest) {
     return response;
   }
 
+  // Explicitly block /admin/login from any direct access (always disguise as 404)
+  if (pathname === '/admin/login' || pathname.startsWith('/admin/login')) {
+    const notFoundUrl = request.nextUrl.clone();
+    notFoundUrl.pathname = '/not-found';
+    return NextResponse.rewrite(notFoundUrl);
+  }
+
   // Restrict direct access to /admin routes unless authorized via secret portal
-  if (pathname.startsWith('/admin')) {
+  if (pathname === '/admin' || pathname.startsWith('/admin/')) {
     const accessCookie = request.cookies.get('md_admin_access');
     const isAuthorized = accessCookie?.value === 'granted';
 
@@ -44,5 +47,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/mitali', '/dharmesh', '/admin/:path*'],
+  matcher: ['/mitali', '/dharmesh', '/admin', '/admin/:path*'],
 };

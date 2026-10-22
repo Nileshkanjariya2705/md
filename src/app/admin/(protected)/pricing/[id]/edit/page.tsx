@@ -24,7 +24,7 @@ export default async function EditPricingPlanPage({ params }: EditPricingProps) 
         title={`Edit Plan: ${plan.name}`}
         description="Update pricing rates, deliverable checklists, tech stacks, or visibility status."
       />
-      <div className="p-8 max-w-7xl">
+      <div className="p-4 sm:p-6 lg:p-8 w-full">
         <PricingForm initialData={plan} isEdit />
       </div>
     </div>

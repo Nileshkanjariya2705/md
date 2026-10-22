@@ -9,7 +9,7 @@ export default function NewTeamMemberPage() {
         title="Add Team Member"
         description="Create a new leadership profile to display on the company roster."
       />
-      <div className="p-8 max-w-7xl">
+      <div className="p-4 sm:p-6 lg:p-8 w-full">
         <TeamForm />
       </div>
     </div>

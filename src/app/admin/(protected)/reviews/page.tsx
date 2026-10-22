@@ -12,7 +12,7 @@ export default async function AdminReviewsPage() {
         title="Client Reviews & Endorsements"
         description="Curate authentic client testimonials, star ratings, and website endorsements."
       />
-      <div className="p-8 max-w-7xl">
+      <div className="p-4 sm:p-6 lg:p-8 w-full">
         <ReviewsTable initialReviews={reviews} />
       </div>
     </div>

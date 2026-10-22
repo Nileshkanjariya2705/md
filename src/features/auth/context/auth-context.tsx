@@ -96,12 +96,19 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const signOut = async () => {
     if (typeof window !== 'undefined') {
       localStorage.removeItem('md_demo_admin');
+      localStorage.removeItem('md_admin_access');
+      localStorage.removeItem('md_admin_operator');
+      document.cookie = 'md_admin_access=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT;';
+      document.cookie = 'md_admin_operator=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT;';
     }
     await signOutAdmin();
     startTransition(() => {
       setUser(null);
       setAdminData(null);
     });
+    if (typeof window !== 'undefined') {
+      window.location.href = '/';
+    }
   };
 
   return (

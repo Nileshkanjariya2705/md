@@ -12,7 +12,7 @@ export default async function AdminTeamPage() {
         title="Team Members & Leadership"
         description="Manage the company roster, designations, bios, and public visibility."
       />
-      <div className="p-8 max-w-7xl">
+      <div className="p-4 sm:p-6 lg:p-8 w-full">
         <TeamTable initialMembers={members} />
       </div>
     </div>

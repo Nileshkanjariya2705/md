@@ -24,7 +24,7 @@ export default async function EditTeamMemberPage({ params }: EditTeamProps) {
         title={`Edit: ${member.name}`}
         description="Update role title, bio, photo URL, or active visibility status."
       />
-      <div className="p-8 max-w-7xl">
+      <div className="p-4 sm:p-6 lg:p-8 w-full">
         <TeamForm initialData={member} isEdit />
       </div>
     </div>

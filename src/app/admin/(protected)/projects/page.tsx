@@ -12,7 +12,7 @@ export default async function AdminProjectsPage() {
         title="Projects & Case Studies"
         description="Manage, feature, and publish enterprise case studies on the public website."
       />
-      <div className="p-8 max-w-7xl">
+      <div className="p-4 sm:p-6 lg:p-8 w-full">
         <ProjectsTable initialProjects={projects} />
       </div>
     </div>

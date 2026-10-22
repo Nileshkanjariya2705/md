@@ -24,7 +24,7 @@ export default async function EditProjectPage({ params }: EditProjectProps) {
         title={`Edit: ${project.title}`}
         description="Update case study copy, technologies, gallery images, or publication status."
       />
-      <div className="p-8 max-w-7xl">
+      <div className="p-4 sm:p-6 lg:p-8 w-full">
         <ProjectForm initialData={project} isEdit />
       </div>
     </div>

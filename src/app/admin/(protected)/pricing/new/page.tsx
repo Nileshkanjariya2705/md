@@ -9,7 +9,7 @@ export default function NewPricingPlanPage() {
         title="Create New Pricing Plan"
         description="Configure a new service tier, pricing structure, and deliverable inclusions."
       />
-      <div className="p-8 max-w-7xl">
+      <div className="p-4 sm:p-6 lg:p-8 w-full">
         <PricingForm />
       </div>
     </div>

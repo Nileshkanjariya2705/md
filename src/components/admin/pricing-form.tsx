@@ -133,7 +133,7 @@ export function PricingForm({ initialData, isEdit = false }: PricingFormProps) {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-8 max-w-4xl">
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-8 w-full">
       <div className="flex items-center justify-between">
         <Link
           href="/admin/pricing"
@@ -155,7 +155,7 @@ export function PricingForm({ initialData, isEdit = false }: PricingFormProps) {
       </div>
 
       {/* Basic Plan Info */}
-      <div className="p-8 rounded-2xl border border-slate-200 bg-white space-y-6 shadow-sm">
+      <div className="p-4 sm:p-6 lg:p-8 rounded-2xl border border-slate-200 bg-white space-y-6 shadow-sm">
         <h3 className="text-lg font-bold text-slate-900 border-b border-slate-100 pb-4">
           Plan Identification
         </h3>
@@ -197,7 +197,7 @@ export function PricingForm({ initialData, isEdit = false }: PricingFormProps) {
       </div>
 
       {/* Pricing & Billing Structure */}
-      <div className="p-8 rounded-2xl border border-slate-200 bg-white space-y-6 shadow-sm">
+      <div className="p-4 sm:p-6 lg:p-8 rounded-2xl border border-slate-200 bg-white space-y-6 shadow-sm">
         <h3 className="text-lg font-bold text-slate-900 border-b border-slate-100 pb-4">
           Investment & Billing Rates
         </h3>
@@ -238,7 +238,7 @@ export function PricingForm({ initialData, isEdit = false }: PricingFormProps) {
       </div>
 
       {/* Team Pod & Delivery Scope */}
-      <div className="p-8 rounded-2xl border border-slate-200 bg-white space-y-6 shadow-sm">
+      <div className="p-4 sm:p-6 lg:p-8 rounded-2xl border border-slate-200 bg-white space-y-6 shadow-sm">
         <h3 className="text-lg font-bold text-slate-900 border-b border-slate-100 pb-4">
           Team Pod & Execution Scope
         </h3>
@@ -277,7 +277,7 @@ export function PricingForm({ initialData, isEdit = false }: PricingFormProps) {
       </div>
 
       {/* Deliverables Checklist & Technologies */}
-      <div className="p-8 rounded-2xl border border-slate-200 bg-white space-y-6 shadow-sm">
+      <div className="p-4 sm:p-6 lg:p-8 rounded-2xl border border-slate-200 bg-white space-y-6 shadow-sm">
         <h3 className="text-lg font-bold text-slate-900 border-b border-slate-100 pb-4">
           Deliverables Checklist & Tech Stack
         </h3>
@@ -313,7 +313,7 @@ export function PricingForm({ initialData, isEdit = false }: PricingFormProps) {
       </div>
 
       {/* Call to Action & Display Configuration */}
-      <div className="p-8 rounded-2xl border border-slate-200 bg-white space-y-6 shadow-sm">
+      <div className="p-4 sm:p-6 lg:p-8 rounded-2xl border border-slate-200 bg-white space-y-6 shadow-sm">
         <h3 className="text-lg font-bold text-slate-900 border-b border-slate-100 pb-4">
           CTA Button & Display Controls
         </h3>

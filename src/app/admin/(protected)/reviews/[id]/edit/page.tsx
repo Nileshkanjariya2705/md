@@ -24,7 +24,7 @@ export default async function EditReviewPage({ params }: EditReviewProps) {
         title={`Edit Review: ${review.clientName}`}
         description="Modify quote content, company affiliation, rating score, or visibility."
       />
-      <div className="p-8 max-w-7xl">
+      <div className="p-4 sm:p-6 lg:p-8 w-full">
         <ReviewForm initialData={review} isEdit />
       </div>
     </div>

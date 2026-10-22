@@ -91,8 +91,12 @@ export function MessagesTable({ initialMessages }: MessagesTableProps) {
         />
       </div>
 
+      <p className="text-[11px] text-slate-400 md:hidden flex items-center gap-1.5 px-1">
+        <span>↔</span> Swipe table horizontally to view full message subjects & status
+      </p>
+
       <div className="rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-sm">
-        <Table>
+        <Table className="min-w-[700px]">
           <TableHeader>
             <TableRow>
               <TableHead>Sender Details</TableHead>

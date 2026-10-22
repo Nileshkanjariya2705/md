@@ -75,7 +75,7 @@ export function ProjectsTable({ initialProjects }: ProjectsTableProps) {
   return (
     <div className="space-y-6">
       {/* Search & Actions Bar */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-4">
         <div className="relative w-full sm:w-80">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
           <Input
@@ -93,9 +93,13 @@ export function ProjectsTable({ initialProjects }: ProjectsTableProps) {
         </Button>
       </div>
 
+      <p className="text-[11px] text-slate-400 md:hidden flex items-center gap-1.5 px-1">
+        <span>↔</span> Swipe table horizontally to view full details
+      </p>
+
       {/* Projects Table */}
       <div className="rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-sm">
-        <Table>
+        <Table className="min-w-[760px]">
           <TableHeader>
             <TableRow>
               <TableHead className="w-16">Cover</TableHead>

@@ -9,7 +9,7 @@ export default function NewReviewPage() {
         title="Add Client Review"
         description="Publish a new client testimonial and rating to the endorsements section."
       />
-      <div className="p-8 max-w-7xl">
+      <div className="p-4 sm:p-6 lg:p-8 w-full">
         <ReviewForm />
       </div>
     </div>

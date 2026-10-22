@@ -106,7 +106,7 @@ export function ProjectForm({ initialData, isEdit = false }: ProjectFormProps) {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-8 max-w-4xl">
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-8 w-full">
       <div className="flex items-center justify-between">
         <Link
           href="/admin/projects"
@@ -127,7 +127,7 @@ export function ProjectForm({ initialData, isEdit = false }: ProjectFormProps) {
         </Button>
       </div>
 
-      <div className="p-8 rounded-2xl border border-slate-200 bg-white space-y-6 shadow-sm">
+      <div className="p-4 sm:p-6 lg:p-8 rounded-2xl border border-slate-200 bg-white space-y-6 shadow-sm">
         <h3 className="text-lg font-bold text-slate-900 border-b border-slate-100 pb-4">
           Basic Project Information
         </h3>
@@ -238,7 +238,7 @@ export function ProjectForm({ initialData, isEdit = false }: ProjectFormProps) {
       </div>
 
       {/* Media & Links */}
-      <div className="p-8 rounded-2xl border border-slate-200 bg-white space-y-6 shadow-sm">
+      <div className="p-4 sm:p-6 lg:p-8 rounded-2xl border border-slate-200 bg-white space-y-6 shadow-sm">
         <h3 className="text-lg font-bold text-slate-900 border-b border-slate-100 pb-4">
           Media Assets & External Links
         </h3>
@@ -306,7 +306,7 @@ export function ProjectForm({ initialData, isEdit = false }: ProjectFormProps) {
       </div>
 
       {/* Visibility Settings */}
-      <div className="p-8 rounded-2xl border border-slate-200 bg-white space-y-6 shadow-sm">
+      <div className="p-4 sm:p-6 lg:p-8 rounded-2xl border border-slate-200 bg-white space-y-6 shadow-sm">
         <h3 className="text-lg font-bold text-slate-900 border-b border-slate-100 pb-4">
           Publishing Controls
         </h3>

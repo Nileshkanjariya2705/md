@@ -12,7 +12,7 @@ export default async function AdminMessagesPage() {
         title="Contact Messages & Inquiries"
         description="Review inbound client leads, change workflow statuses, and respond directly."
       />
-      <div className="p-8 max-w-7xl">
+      <div className="p-4 sm:p-6 lg:p-8 w-full">
         <MessagesTable initialMessages={messages} />
       </div>
     </div>

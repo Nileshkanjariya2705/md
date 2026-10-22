@@ -9,7 +9,7 @@ export default function NewProjectPage() {
         title="Create New Project"
         description="Add a new enterprise case study to your portfolio showcase."
       />
-      <div className="p-8 max-w-7xl">
+      <div className="p-4 sm:p-6 lg:p-8 w-full">
         <ProjectForm />
       </div>
     </div>

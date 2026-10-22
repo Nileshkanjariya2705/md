@@ -14,7 +14,7 @@ export default async function AdminPricingPage() {
         title="Pricing Plans & Packages"
         description="Manage pricing tiers, deliverable checklists, rates, and visibility on the public website."
       />
-      <div className="p-8 max-w-7xl">
+      <div className="p-4 sm:p-6 lg:p-8 w-full">
         <PricingTable initialPlans={plans} />
       </div>
     </div>

@@ -23,7 +23,8 @@ export function AdminGuard({ children }: { children: React.ReactNode }) {
     setIsGateAuthorized(true);
 
     if (!isLoading && !user) {
-      router.push('/admin/login');
+      const activeOp = (typeof window !== 'undefined' ? localStorage.getItem('md_admin_operator') : null) || 'mitali';
+      router.replace(`/${activeOp}`);
     }
   }, [user, isLoading, router]);
 

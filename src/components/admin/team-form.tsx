@@ -71,7 +71,7 @@ export function TeamForm({ initialData, isEdit = false }: TeamFormProps) {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-8 max-w-3xl">
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-8 w-full">
       <div className="flex items-center justify-between">
         <Link
           href="/admin/team"
@@ -92,7 +92,7 @@ export function TeamForm({ initialData, isEdit = false }: TeamFormProps) {
         </Button>
       </div>
 
-      <div className="p-8 rounded-2xl border border-slate-200 bg-white space-y-6 shadow-sm">
+      <div className="p-4 sm:p-6 lg:p-8 rounded-2xl border border-slate-200 bg-white space-y-6 shadow-sm">
         <h3 className="text-lg font-bold text-slate-900 border-b border-slate-100 pb-4">
           Member Profile
         </h3>
@@ -171,7 +171,7 @@ export function TeamForm({ initialData, isEdit = false }: TeamFormProps) {
         </div>
       </div>
 
-      <div className="p-8 rounded-2xl border border-slate-200 bg-white space-y-6 shadow-sm">
+      <div className="p-4 sm:p-6 lg:p-8 rounded-2xl border border-slate-200 bg-white space-y-6 shadow-sm">
         <h3 className="text-lg font-bold text-slate-900 border-b border-slate-100 pb-4">
           Social & Portfolio Links
         </h3>
@@ -212,7 +212,7 @@ export function TeamForm({ initialData, isEdit = false }: TeamFormProps) {
         </div>
       </div>
 
-      <div className="p-8 rounded-2xl border border-slate-200 bg-white shadow-sm">
+      <div className="p-4 sm:p-6 lg:p-8 rounded-2xl border border-slate-200 bg-white shadow-sm">
         <div className="flex items-center justify-between">
           <div>
             <h4 className="text-sm font-bold text-slate-900">Active Status</h4>
