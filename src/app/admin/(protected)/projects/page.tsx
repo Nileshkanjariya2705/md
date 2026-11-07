@@ -3,6 +3,8 @@ import { AdminHeader } from '@/components/admin/admin-header';
 import { ProjectsTable } from '@/components/admin/projects-table';
 import { getAllProjects } from '@/features/projects/services/project.service';
 
+export const dynamic = 'force-dynamic';
+
 export default async function AdminProjectsPage() {
   const projects = await getAllProjects();
 

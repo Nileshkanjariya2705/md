@@ -5,6 +5,7 @@ import {
 } from 'firebase/auth';
 import { doc, getDoc } from 'firebase/firestore';
 import { getFirebaseAuth, getFirebaseFirestore } from '@/lib/firebase';
+import { isFirebaseConfigured } from '@/lib/firebase/config';
 import { AdminUser } from '../types';
 
 export async function signInAdmin(email: string, pass: string): Promise<User | { uid: string; email: string }> {
@@ -16,12 +17,15 @@ export async function signInAdmin(email: string, pass: string): Promise<User | {
       const auth = getFirebaseAuth();
       const cred = await signInWithEmailAndPassword(auth, email, pass);
       return cred.user;
-    } catch {
-      // Local fallback for admin login in development or when Firebase user is not provisioned
-      return {
-        uid: 'demo-admin-uid',
-        email: 'mitali@gmail.com',
-      };
+    } catch (err) {
+      if (!isFirebaseConfigured) {
+        // Local fallback for admin login in development or when Firebase user is not provisioned
+        return {
+          uid: 'demo-admin-uid',
+          email: 'mitali@gmail.com',
+        };
+      }
+      throw err;
     }
   }
 

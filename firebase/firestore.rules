@@ -14,27 +14,27 @@ service cloud.firestore {
       );
     }
 
-    // Projects: Public reads published only, admin full CRUD
+    // Projects: Public read, admin full CRUD
     match /projects/{projectId} {
-      allow read: if resource.data.isPublished == true || isAdmin();
+      allow read: if true;
       allow create, update, delete: if isAdmin();
     }
 
-    // Team Members: Public reads active only, admin full CRUD
+    // Team Members: Public read, admin full CRUD
     match /teamMembers/{memberId} {
-      allow read: if resource.data.isActive == true || isAdmin();
+      allow read: if true;
       allow create, update, delete: if isAdmin();
     }
 
-    // Client Reviews: Public reads published only, admin full CRUD
+    // Client Reviews: Public read, admin full CRUD
     match /clientReviews/{reviewId} {
-      allow read: if resource.data.isPublished == true || isAdmin();
+      allow read: if true;
       allow create, update, delete: if isAdmin();
     }
 
-    // Pricing Plans: Public reads active only, admin full CRUD
+    // Pricing Plans: Public read, admin full CRUD
     match /pricing/{planId} {
-      allow read: if resource.data.isActive == true || isAdmin();
+      allow read: if true;
       allow create, update, delete: if isAdmin();
     }
 

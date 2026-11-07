@@ -3,6 +3,8 @@ import { AdminHeader } from '@/components/admin/admin-header';
 import { ReviewsTable } from '@/components/admin/reviews-table';
 import { getAllReviews } from '@/features/reviews/services/review.service';
 
+export const dynamic = 'force-dynamic';
+
 export default async function AdminReviewsPage() {
   const reviews = await getAllReviews();
 

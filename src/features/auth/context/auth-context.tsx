@@ -3,6 +3,7 @@
 import React, { createContext, useContext, useEffect, useState, useTransition } from 'react';
 import { onAuthStateChanged, User } from 'firebase/auth';
 import { getFirebaseAuth } from '@/lib/firebase';
+import { isFirebaseConfigured } from '@/lib/firebase/config';
 import { AdminUser } from '../types';
 import { signInAdmin, signOutAdmin, getAdminData } from '../services/auth.service';
 
@@ -29,17 +30,22 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [, startTransition] = useTransition();
 
   useEffect(() => {
-    // Check local storage for demo admin session
-    const savedDemo = typeof window !== 'undefined' ? localStorage.getItem('md_demo_admin') : null;
-    if (savedDemo) {
-      try {
-        const parsed = JSON.parse(savedDemo);
-        setUser({ uid: parsed.uid, email: parsed.email });
-        setAdminData(parsed);
-        setIsLoading(false);
-        return;
-      } catch {
-        localStorage.removeItem('md_demo_admin');
+    // Clear demo admin if real Firebase is configured
+    if (isFirebaseConfigured && typeof window !== 'undefined') {
+      localStorage.removeItem('md_demo_admin');
+    } else {
+      // Check local storage for demo admin session
+      const savedDemo = typeof window !== 'undefined' ? localStorage.getItem('md_demo_admin') : null;
+      if (savedDemo) {
+        try {
+          const parsed = JSON.parse(savedDemo);
+          setUser({ uid: parsed.uid, email: parsed.email });
+          setAdminData(parsed);
+          setIsLoading(false);
+          return;
+        } catch {
+          localStorage.removeItem('md_demo_admin');
+        }
       }
     }
 

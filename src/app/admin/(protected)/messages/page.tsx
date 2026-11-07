@@ -3,6 +3,8 @@ import { AdminHeader } from '@/components/admin/admin-header';
 import { MessagesTable } from '@/components/admin/messages-table';
 import { getAllMessages } from '@/features/contact/services/contact.service';
 
+export const dynamic = 'force-dynamic';
+
 export default async function AdminMessagesPage() {
   const messages = await getAllMessages();
 
