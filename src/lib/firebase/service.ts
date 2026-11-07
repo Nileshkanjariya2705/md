@@ -19,7 +19,7 @@ import { getFirebaseApp } from './app';
 import { serializeData } from '@/lib/utils/serialize';
 import { isFirebaseConfigured } from './config';
 
-function withTimeout<T>(promise: Promise<T>, ms = 1200): Promise<T> {
+function withTimeout<T>(promise: Promise<T>, ms = 6000): Promise<T> {
   return Promise.race([
     promise,
     new Promise<T>((_, reject) =>
@@ -77,8 +77,9 @@ export class FirebaseConnectionService {
         ? query(collection(this.db, collectionName), ...constraints)
         : query(collection(this.db, collectionName));
 
-      const snapshot = await withTimeout(getDocs(q), 1200);
+      const snapshot = await withTimeout(getDocs(q), 6000);
       if (!snapshot.empty) {
+        console.info(`[Firestore] Successfully fetched ${snapshot.size} documents from '${collectionName}'`);
         return serializeData(
           snapshot.docs.map((docSnap) => ({
             id: docSnap.id,
@@ -118,7 +119,7 @@ export class FirebaseConnectionService {
 
     try {
       const docRef = doc(this.db, collectionName, id);
-      const snapshot = await withTimeout(getDoc(docRef), 1200);
+      const snapshot = await withTimeout(getDoc(docRef), 6000);
       if (snapshot.exists()) {
         return serializeData({
           id: snapshot.id,

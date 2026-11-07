@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+
+export const dynamic = 'force-dynamic';
 import { notFound } from 'next/navigation';
 import { Container } from '@/components/layout/container';
 import { Badge } from '@/components/ui/badge';
