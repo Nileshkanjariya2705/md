@@ -25,14 +25,14 @@ export const SITE_CONFIG = {
   description:
     'Magnovaa Technology engineers high-concurrency systems, generative AI platforms, cloud architectures, and bespoke software solutions worldwide.',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://magnovaa.com',
-  email: 'hello@magnovaa.com',
-  phone: '+1 (555) 000-0000',
+  email: 'magnovaa11@gmail.com',
+  phone: '+91 9662225971',
   address: {
-    street: '123 Innovation Drive',
-    city: 'San Francisco',
-    state: 'CA',
-    zip: '94102',
-    country: 'US',
+    street: 'Pride Square, 2nd Floor, Opp. Aalap Avenue , Pushkardham Main Road',
+    city: 'Rajkot',
+    state: 'Gujarat',
+    zip: '360005',
+    country: 'India',
   },
   social: {
     linkedin: 'https://linkedin.com/company/magnovaa',
