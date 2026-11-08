@@ -4,7 +4,7 @@ import React, { useState, useRef } from 'react';
 import Image from 'next/image';
 import { UploadCloud, X, Loader2, Image as ImageIcon, Link as LinkIcon } from 'lucide-react';
 import { toast } from 'sonner';
-import { uploadImageToStorage } from '@/lib/firebase/upload';
+import { uploadImage } from '@/lib/upload';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
@@ -48,14 +48,14 @@ export function ImageUpload({
       setIsUploading(true);
       setUploadProgress(0);
 
-      const downloadUrl = await uploadImageToStorage(file, {
+      const downloadUrl = await uploadImage(file, {
         folder,
         maxSizeMB,
         onProgress: (p) => setUploadProgress(p),
       });
 
       onChange(downloadUrl);
-      toast.success('Photo uploaded successfully to Cloud Storage');
+      toast.success('Photo uploaded successfully');
     } catch (err: unknown) {
       console.error('Upload failed:', err);
       const msg = (err as Error)?.message || 'Failed to upload photo';
@@ -209,3 +209,4 @@ export function ImageUpload({
     </div>
   );
 }
+
