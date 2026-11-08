@@ -71,3 +71,4 @@ export function uploadImage(
 
 // Backward-compatible alias
 export const uploadImageToStorage = uploadImage;
+
