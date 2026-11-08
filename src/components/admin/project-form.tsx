@@ -16,6 +16,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Switch } from '@/components/ui/switch';
+import { ImageUpload } from '@/components/ui/image-upload';
 import { Loader2, Wand2, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 
@@ -244,13 +245,13 @@ export function ProjectForm({ initialData, isEdit = false }: ProjectFormProps) {
         </h3>
 
         <div className="space-y-1.5">
-          <label className="text-xs font-semibold text-slate-700">
-            Cover Image URL *
-          </label>
-          <Input
-            placeholder="https://images.unsplash.com/photo-..."
-            {...register('coverImage')}
-            className={errors.coverImage ? 'border-rose-500' : ''}
+          <ImageUpload
+            value={watch('coverImage')}
+            onChange={(url) => setValue('coverImage', url, { shouldValidate: true })}
+            folder="projects"
+            label="Cover Image *"
+            disabled={isSubmitting}
+            maxSizeMB={10}
           />
           {errors.coverImage && (
             <p className="text-xs text-rose-500">{errors.coverImage.message}</p>

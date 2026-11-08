@@ -15,6 +15,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Switch } from '@/components/ui/switch';
+import { ImageUpload } from '@/components/ui/image-upload';
 import { Loader2, ArrowLeft, Star } from 'lucide-react';
 import Link from 'next/link';
 
@@ -148,13 +149,13 @@ export function ReviewForm({ initialData, isEdit = false }: ReviewFormProps) {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div className="space-y-1.5">
-            <label className="text-xs font-semibold text-slate-700">
-              Photo URL (Optional)
-            </label>
-            <Input
-              placeholder="https://images.unsplash.com/photo-..."
-              {...register('photo')}
+          <div className="space-y-1.5 sm:col-span-2">
+            <ImageUpload
+              value={watch('photo')}
+              onChange={(url) => setValue('photo', url, { shouldValidate: true })}
+              folder="reviews"
+              label="Client Photo (Optional)"
+              disabled={isSubmitting}
             />
           </div>
 
